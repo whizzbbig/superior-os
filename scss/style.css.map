@@ -1,0 +1,19 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "style.scss",
+        "abstracts/_functions.scss",
+        "abstracts/_mixins.scss",
+        "abstracts/_variables.scss",
+        "base/_typography.scss",
+        "components/_buttons.scss",
+        "components/_carousel.scss",
+        "components/_slider.scss",
+        "layout/_footer.scss",
+        "layout/_header.scss",
+        "layout/_navigation.scss"
+    ],
+    "names": [],
+    "file": "style.css"
+}
