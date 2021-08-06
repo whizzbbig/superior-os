@@ -1,0 +1,47 @@
+.btn {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 80%;
+  background-color: white;
+  display: inline-block;
+  text-align: center;
+  align-items: center;
+  border-radius: 50%;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+
+  @media (max-height: 812px) {
+      top: 95%;
+  }
+
+  &-download {
+    & svg {
+      margin-top: 2.5rem;
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      transition: all 0.4s;
+      opacity: 1;
+    }
+
+    &:hover::after,
+    &:visited::after, &:focus::after, &:focus-visible::after {
+      transform: scaleX(2) scaleY(2);
+      opacity: 0;
+      background-color: red;
+    }
+  }
+}

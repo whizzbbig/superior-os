@@ -1,0 +1,44 @@
+.header {
+  position: relative;
+  height: 100vh;
+
+  .caption-container {
+    position: absolute;
+    top: 30vw;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 100vh;
+  }
+
+  .caption {
+    position: absolute;
+    display: flex;
+    flex-wrap: nowrap;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: -1;
+    text-align: center;
+    white-space: nowrap;
+
+    &:nth-child(2) {
+      & .caption__heading {
+        top: 20vw;
+        animation-direction: reverse;
+      }
+    }
+
+    &:last-child {
+        top: 40vw;
+    }
+  }
+
+  &__img {
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      top: 30vw;
+  }
+}
