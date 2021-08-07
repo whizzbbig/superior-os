@@ -189,8 +189,20 @@ section:not(.horizontal-scroll) {
   animation-direction: reverse;
 }
 
+@media (max-height: 812px) {
+  .header .caption:nth-child(2) .caption__heading {
+    top: 30vw;
+  }
+}
+
 .header .caption:last-child {
   top: 40vw;
+}
+
+@media (max-height: 812px) {
+  .header .caption:last-child {
+    top: 60vw;
+  }
 }
 
 .header__img {
@@ -309,8 +321,14 @@ section:not(.horizontal-scroll) {
   text-align: center;
   text-indent: 28px;
   width: 100%;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: #fff;
+}
+
+@media (min-width: 580px) {
+  .link-title {
+    font-size: 2rem;
+  }
 }
 
 .screenshots:hover,

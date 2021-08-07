@@ -26,19 +26,27 @@
       & .caption__heading {
         top: 20vw;
         animation-direction: reverse;
+
+        @media (max-height: 812px) {
+          top: 30vw;
+        }
       }
     }
 
     &:last-child {
-        top: 40vw;
+      top: 40vw;
+
+      @media (max-height: 812px) {
+        top: 60vw;
+      }
     }
   }
 
   &__img {
-      position: absolute;
-      left: 0;
-      right: 0;
-      margin: 0 auto;
-      top: 30vw;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 30vw;
   }
 }
