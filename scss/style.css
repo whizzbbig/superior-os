@@ -285,6 +285,12 @@ section:not(.horizontal-scroll) {
   width: 140px;
 }
 
+@media (max-height: 812px) {
+  .link:hover, .link:focus {
+    width: 100px;
+  }
+}
+
 .link:hover:before,
 .link:hover .link-title, .link:focus:before,
 .link:focus .link-title {
@@ -335,6 +341,13 @@ section:not(.horizontal-scroll) {
 .screenshots:focus {
   text-align: right;
   width: 180px;
+}
+
+@media (max-height: 812px) {
+  .screenshots:hover,
+  .screenshots:focus {
+    width: 135px;
+  }
 }
 
 .screenshots .link-title {

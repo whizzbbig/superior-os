@@ -52,6 +52,10 @@
   &:focus {
     outline: 0;
     width: 140px;
+
+    @media (max-height: 812px) {
+      width: 100px;
+    }
   }
 
   &:hover:before,
@@ -95,6 +99,10 @@
 .screenshots:focus {
   text-align: right;
   width: 180px;
+
+  @media (max-height: 812px) {
+    width: 135px
+  }
 }
 
 .screenshots .link-title {
