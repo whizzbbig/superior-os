@@ -57,6 +57,15 @@ section:not(.horizontal-scroll) {
   font-family: montserrat, sans-serif;
   font-weight: 900;
 
+  .reverse {
+    animation: infinteReverseText 10s linear infinite;
+    transform: translateX(-50%);
+  }
+
+  .uphold {
+    animation: infiniteText 10s linear infinite;
+  }
+
   &__heading {
     position: relative;
     letter-spacing: 3.5px;
@@ -64,16 +73,24 @@ section:not(.horizontal-scroll) {
     white-space: nowrap;
     -webkit-text-stroke: 3px rgb(27, 17, 17);
     color: transparent;
-    animation: infiniteText 10s linear infinite;
+  }
 
-    @keyframes infiniteText {
-      0% {
-        transform: translateX(0);
-      }
+  @keyframes infinteReverseText {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(-5.2%);
+    }
+  }
 
-      100% {
-        transform: translateX(-50%);
-      }
+  @keyframes infiniteText {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-50%);
     }
   }
 }

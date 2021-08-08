@@ -64,6 +64,18 @@ section:not(.horizontal-scroll) {
   font-weight: 900;
 }
 
+.caption .reverse {
+  -webkit-animation: infinteReverseText 10s linear infinite;
+          animation: infinteReverseText 10s linear infinite;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.caption .uphold {
+  -webkit-animation: infiniteText 10s linear infinite;
+          animation: infiniteText 10s linear infinite;
+}
+
 .caption__heading {
   position: relative;
   letter-spacing: 3.5px;
@@ -71,8 +83,28 @@ section:not(.horizontal-scroll) {
   white-space: nowrap;
   -webkit-text-stroke: 3px #1b1111;
   color: transparent;
-  -webkit-animation: infiniteText 10s linear infinite;
-          animation: infiniteText 10s linear infinite;
+}
+
+@-webkit-keyframes infinteReverseText {
+  0% {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  100% {
+    -webkit-transform: translateX(-5.2%);
+            transform: translateX(-5.2%);
+  }
+}
+
+@keyframes infinteReverseText {
+  0% {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  100% {
+    -webkit-transform: translateX(-5.2%);
+            transform: translateX(-5.2%);
+  }
 }
 
 @-webkit-keyframes infiniteText {
@@ -186,7 +218,6 @@ section:not(.horizontal-scroll) {
 
 .header .caption:nth-child(2) .caption__heading {
   top: 20vw;
-  animation-direction: reverse;
 }
 
 @media (max-height: 812px) {

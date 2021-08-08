@@ -25,7 +25,6 @@
     &:nth-child(2) {
       & .caption__heading {
         top: 20vw;
-        animation-direction: reverse;
 
         @media (max-height: 812px) {
           top: 30vw;
