@@ -22,7 +22,7 @@
   </head>
   <body>
     <nav class="nav">
-      <a href="#header" class="link">
+      <a href="#home" class="link">
         <span class="link-icon">
           <!-- icon -->
           <svg
@@ -45,7 +45,7 @@
         </span>
         <span class="link-title">Home</span>
       </a>
-      <a href="#" class="link">
+      <a href="#features" class="link">
         <span class="link-icon">
           <!-- icon -->
           <svg
@@ -68,7 +68,7 @@
         </span>
         <span class="link-title">Features</span>
       </a>
-      <a href="#" class="link screenshots">
+      <a href="#screenshots" class="link screenshots">
         <span class="link-icon">
           <!-- icon -->
           <svg
@@ -89,7 +89,7 @@
         <span class="link-title">Screenshots</span>
       </a>
 
-      <a href="#" class="link">
+      <a href="#team" class="link">
         <span class="link-icon">
           <!-- icon -->
           <svg
@@ -132,7 +132,12 @@
       <!-- /icon -->
     </nav>
     <div class="container">
-      <header id="header" data-bgcolor="#080705" data-textcolor="#F5F5F5" class="header">
+      <header
+        id="home"
+        data-bgcolor="#080705"
+        data-textcolor="#F5F5F5"
+        class="header"
+      >
         <h1 class="header__heading">
           <span
             data-scroll
@@ -149,63 +154,131 @@
             >Os</span
           >
         </h1>
-        <div class="caption-container">
-          <div
-            data-scroll
-            data-scroll-direction="horizontal"
-            data-scroll-speed="5"
-            class="caption"
-          >
-            <h2 class="caption__heading uphold">
-              Stable Stable Stable Stable Stable Stable Stable Stable Stable
-              Stable Stable Stable Stable Stable Stable Stable Stable Stable
-            </h2>
+        <div class="header__mobile-view">
+          <div class="caption-container">
+            <div
+              data-scroll
+              data-scroll-direction="horizontal"
+              data-scroll-speed="5"
+              class="caption"
+            >
+              <h2 class="caption__heading uphold">
+                Stable Stable Stable Stable Stable Stable Stable Stable Stable
+                Stable Stable Stable Stable Stable Stable Stable Stable Stable
+              </h2>
+            </div>
+            <div
+              data-scroll
+              data-scroll-direction="horizontal"
+              data-scroll-speed="-5"
+              class="caption"
+            >
+              <h2 class="caption__heading reverse">
+                Secure Secure Secure Secure Secure Secure Secure Secure Secure
+                Secure Secure Secure Secure Secure Secure Secure Secure Secure
+              </h2>
+            </div>
+            <div
+              data-scroll
+              data-scroll-direction="horizontal"
+              data-scroll-speed="5"
+              class="caption"
+            >
+              <h2 class="caption__heading uphold">
+                Highly Customizable Highly Customizable Highly Customizable
+                Highly Customizable Highly Customizable Highly Customizable
+                Highly Customizable
+              </h2>
+            </div>
           </div>
-          <div
-            data-scroll
-            data-scroll-direction="horizontal"
-            data-scroll-speed="-5"
-            class="caption"
-          >
-            <h2 class="caption__heading reverse">
-              Secure Secure Secure Secure Secure Secure Secure Secure Secure
-              Secure Secure Secure Secure Secure Secure Secure Secure Secure
-            </h2>
-          </div>
-          <div
-            data-scroll
-            data-scroll-direction="horizontal"
-            data-scroll-speed="5"
-            class="caption"
-          >
-            <h2 class="caption__heading uphold">
-              Highly Customizable Highly Customizable Highly Customizable Highly
-              Customizable Highly Customizable Highly Customizable Highly
-              Customizable
-            </h2>
-          </div>
+          <img
+            class="header__mobile-view__img"
+            src="./img/lockscreen.png"
+            alt="lockscreen"
+          />
+          <a href="#" class="btn-download btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="29"
+              height="29"
+              viewBox="0 0 29 29"
+              fill="none"
+            >
+              <path
+                d="M24.9722 24.9722H4.02778C3.81414 24.9722 3.60924 25.0571 3.45817 25.2082C3.3071 25.3592 3.22223 25.5641 3.22223 25.7778C3.22223 25.9914 3.3071 26.1963 3.45817 26.3474C3.60924 26.4985 3.81414 26.5833 4.02778 26.5833H24.9722C25.1859 26.5833 25.3908 26.4985 25.5418 26.3474C25.6929 26.1963 25.7778 25.9914 25.7778 25.7778C25.7778 25.5641 25.6929 25.3592 25.5418 25.2082C25.3908 25.0571 25.1859 24.9722 24.9722 24.9722Z"
+                fill="black"
+              />
+              <path
+                d="M14.5 23.7478L23.0469 15.2008C23.1789 15.0467 23.2479 14.8485 23.24 14.6458C23.2322 14.443 23.1482 14.2507 23.0047 14.1072C22.8612 13.9638 22.6689 13.8797 22.4662 13.8719C22.2634 13.8641 22.0652 13.933 21.9111 14.065L15.3056 20.6625V4.02778C15.3056 3.81414 15.2207 3.60924 15.0696 3.45817C14.9185 3.3071 14.7136 3.22223 14.5 3.22223C14.2864 3.22223 14.0815 3.3071 13.9304 3.45817C13.7793 3.60924 13.6944 3.81414 13.6944 4.02778V20.6625L7.09695 14.065C7.02473 13.9807 6.93586 13.9122 6.83592 13.8638C6.73598 13.8155 6.62712 13.7883 6.51618 13.784C6.40524 13.7797 6.29461 13.7984 6.19124 13.8389C6.08787 13.8794 5.99398 13.9409 5.91548 14.0194C5.83697 14.0979 5.77554 14.1918 5.73504 14.2951C5.69454 14.3985 5.67585 14.5091 5.68014 14.6201C5.68442 14.731 5.71159 14.8399 5.75994 14.9398C5.8083 15.0398 5.87679 15.1286 5.96111 15.2008L14.5 23.7478Z"
+                fill="black"
+              />
+            </svg>
+          </a>
         </div>
-        <img class="header__img" src="./img/lockscreen.png" alt="lockscreen" />
-        <a href="#" class="btn-download btn">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="29"
-            height="29"
-            viewBox="0 0 29 29"
-            fill="none"
-          >
-            <path
-              d="M24.9722 24.9722H4.02778C3.81414 24.9722 3.60924 25.0571 3.45817 25.2082C3.3071 25.3592 3.22223 25.5641 3.22223 25.7778C3.22223 25.9914 3.3071 26.1963 3.45817 26.3474C3.60924 26.4985 3.81414 26.5833 4.02778 26.5833H24.9722C25.1859 26.5833 25.3908 26.4985 25.5418 26.3474C25.6929 26.1963 25.7778 25.9914 25.7778 25.7778C25.7778 25.5641 25.6929 25.3592 25.5418 25.2082C25.3908 25.0571 25.1859 24.9722 24.9722 24.9722Z"
-              fill="black"
-            />
-            <path
-              d="M14.5 23.7478L23.0469 15.2008C23.1789 15.0467 23.2479 14.8485 23.24 14.6458C23.2322 14.443 23.1482 14.2507 23.0047 14.1072C22.8612 13.9638 22.6689 13.8797 22.4662 13.8719C22.2634 13.8641 22.0652 13.933 21.9111 14.065L15.3056 20.6625V4.02778C15.3056 3.81414 15.2207 3.60924 15.0696 3.45817C14.9185 3.3071 14.7136 3.22223 14.5 3.22223C14.2864 3.22223 14.0815 3.3071 13.9304 3.45817C13.7793 3.60924 13.6944 3.81414 13.6944 4.02778V20.6625L7.09695 14.065C7.02473 13.9807 6.93586 13.9122 6.83592 13.8638C6.73598 13.8155 6.62712 13.7883 6.51618 13.784C6.40524 13.7797 6.29461 13.7984 6.19124 13.8389C6.08787 13.8794 5.99398 13.9409 5.91548 14.0194C5.83697 14.0979 5.77554 14.1918 5.73504 14.2951C5.69454 14.3985 5.67585 14.5091 5.68014 14.6201C5.68442 14.731 5.71159 14.8399 5.75994 14.9398C5.8083 15.0398 5.87679 15.1286 5.96111 15.2008L14.5 23.7478Z"
-              fill="black"
-            />
-          </svg>
-        </a>
       </header>
-      <div style="height: 1000vh"></div>
+      <section
+        id="features"
+        data-bgcolor="#7b2cbf"
+        data-textcolor="#F5F5F5"
+        class="features"
+      >
+        <h1 data-scroll-target=".features" class="features__heading">
+          Features
+        </h1>
+        <div class="features__homescreen">
+          <h2 class="features__homescreen-heading">Homescreen</h2>
+          <img
+            src="./img/home.png"
+            alt="homescreen of superior rom"
+            class="features__homescreen-img"
+          />
+          <p>
+            We want to make you feel homescreen as yours, hence we have added
+            features which makes home screen customizable as per your likes.
+          </p>
+        </div>
+        <div data-bgcolor="#CF3838" class="features__superiorsettings">
+          <h2 class="features__superiorsettings-heading">Superior Settings</h2>
+          <img
+            src="./img/superiorSettings.png"
+            alt="additional settings from superior os rom"
+            class="features__superiorsettings-img"
+          />
+          <p>
+            We have carefully hand-picked features which helps you in your dialy
+            chores. Customize your device as you like.
+          </p>
+        </div>
+        <div data-bgcolor="#69A5FF" class="features__updater">
+          <h2 class="features__superiorsettings-heading">Updater</h2>
+          <img
+            src="./img/version.png"
+            alt="updater panel of superior os rom"
+            class="features__updater-img"
+          />
+          <p>
+            We regularly update all our officially supported devices to make
+            sure your device stays upto-date. We have redesigned our updater to
+            make sure updating doesnt feel overwhelming.
+          </p>
+        </div>
+      </section>
+      <section class="screenshots">
+        <h1 class="screenshots__heading">
+          <span>Screen</span>
+          <span>shots</span>
+        </h1>
+        <img src="./img/lockscreen.png" alt="Lockscreen of Superior Os Rom" />
+        <img src="./img/home.png" alt="Homescreen of Superior Os Rom" />
+        <img src="./img/qs.png" alt="QS Panel of Superior Os Rom" />
+        <img src="./img/settings.png" alt="Settings of Superior Os Rom" />
+        <img
+          src="./img/superiorSettings.png"
+          alt="Additional Settings by Superior Os Rom"
+        />
+        <img src="./img/version.png" alt="Nice display of Version" />
+        <img src="./img/androidVersion.png" alt="Android Version" />
+      </section>
     </div>
 
     <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>

@@ -1,51 +1,120 @@
 .header {
   position: relative;
   height: 100vh;
+  margin-bottom: 10rem;
 
-  .caption-container {
+  &__heading {
     position: absolute;
-    top: 30vw;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    height: 100vh;
+    top: 10vw;
+    left: 10vw;
+    z-index: 1;
+
+    &-span {
+      display: block;
+
+      &:last-child {
+        left: 10;
+      }
+    }
   }
 
-  .caption {
-    position: absolute;
-    display: flex;
-    flex-wrap: nowrap;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    z-index: -1;
-    text-align: center;
-    white-space: nowrap;
+  // Mobile Viewport
 
-    &:nth-child(2) {
-      & .caption__heading {
-        top: 20vw;
+  &__mobile-view {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+
+    .caption-container {
+      position: absolute;
+      top: 30vw;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      height: 100vh;
+    }
+
+    .caption {
+      position: absolute;
+      display: flex;
+      flex-wrap: nowrap;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      z-index: -1;
+      text-align: center;
+      white-space: nowrap;
+
+      .reverse {
+        animation: infinteReverseText 10s linear infinite;
+        transform: translateX(-50%);
+      }
+
+      .uphold {
+        animation: infiniteText 10s linear infinite;
+      }
+
+      &__heading {
+        position: relative;
+        white-space: nowrap;
+        -webkit-text-stroke: 3px rgb(27, 17, 17);
+        color: transparent;
+      }
+
+      &:nth-child(2) {
+        & .caption__heading {
+          top: 20vw;
+
+          @media (max-height: 812px) {
+            top: 30vw;
+          }
+        }
+
+        @keyframes infinteReverseText {
+          0% {
+            transform: translateX(-50%);
+          }
+          100% {
+            transform: translateX(-5.2%);
+          }
+        }
+
+        @keyframes infiniteText {
+          0% {
+            transform: translateX(0);
+          }
+
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+      }
+
+      &:last-child {
+        top: 40vw;
 
         @media (max-height: 812px) {
-          top: 30vw;
+          top: 60vw;
         }
       }
     }
 
-    &:last-child {
-      top: 40vw;
+    &__img {
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      top: 15vw;
 
       @media (max-height: 812px) {
-        top: 60vw;
+        top: 30vw;
       }
     }
-  }
 
-  &__img {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    top: 30vw;
+    @media (min-width: 1200px) {
+      display: none;
+    }
   }
 }

@@ -4,6 +4,7 @@
 @import "./abstracts/variables";
 
 // Base
+@import "./base/defaults";
 @import "./base/typography";
 
 // Components
@@ -14,4 +15,7 @@
 // Layout
 @import "./layout/footer";
 @import "./layout/header";
+@import "./layout/features";
+@import "./layout/screenshots";
+@import "./layout/team";
 @import "./layout/navigation";
