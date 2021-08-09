@@ -60,6 +60,8 @@ img {
 }
 
 body {
+  overflow-x: hidden;
+  width: 100vw;
   background-color: #EF3E36;
   color: #000;
   font-family: montserrat, sans-serif;
@@ -94,14 +96,21 @@ body {
   letter-spacing: 1px;
 }
 
+.heading {
+  font-size: 6rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
 .btn {
   position: absolute;
   width: 70px;
   height: 70px;
   left: 0;
   right: 0;
+  bottom: 0;
   margin: 0 auto;
-  top: 90%;
   background-color: white;
   display: inline-block;
   text-align: center;
@@ -111,12 +120,6 @@ body {
   border-radius: 50%;
   outline: none;
   -webkit-tap-highlight-color: transparent;
-}
-
-@media (max-height: 812px) {
-  .btn {
-    top: 100%;
-  }
 }
 
 .btn-download svg {
@@ -149,6 +152,7 @@ body {
   position: relative;
   height: 100vh;
   margin-bottom: 10rem;
+  overflow-x: none;
 }
 
 .header__heading {
@@ -168,7 +172,7 @@ body {
 
 .header__mobile-view {
   position: relative;
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -177,6 +181,15 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 400px) {
+  .header__mobile-view {
+    height: 110vh;
+  }
 }
 
 .header__mobile-view .caption-container {
@@ -330,7 +343,7 @@ body {
 .features__homescreen .features__homescreen-img,
 .features__superiorsettings .features__superiorsettings-img,
 .features__updater .features__updater-img {
-  max-width: 1500px;
+  max-width: 400px;
   margin: 0 auto;
   padding: 2vw 0;
 }
@@ -342,8 +355,8 @@ body {
   font-size: 4rem;
   font-weight: 900;
   font-family: termina, sans-serif;
-  -webkit-animation: strokeLoop 0.5s linear infinite;
-          animation: strokeLoop 0.5s linear infinite;
+  -webkit-animation: strokeLoop .5s linear infinite;
+          animation: strokeLoop .5s linear infinite;
 }
 
 @-webkit-keyframes strokeLoop {
@@ -400,6 +413,68 @@ body {
 .features__heading {
   text-align: center;
   margin-bottom: 5rem;
+}
+
+.grid-item {
+  padding: 4em 1em;
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.main {
+  grid-area: main;
+  padding: 0;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.main ::-webkit-scrollbar {
+  display: none;
+}
+
+@media (min-width: 1100px) {
+  .main {
+    display: none;
+  }
+}
+
+.items {
+  position: relative;
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+  will-change: transform;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+
+.items img {
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.items.active {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.items .item {
+  display: inline-block;
+}
+
+.items .item3 {
+  max-width: 300px;
 }
 
 .nav {

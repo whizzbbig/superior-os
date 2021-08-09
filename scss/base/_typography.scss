@@ -1,4 +1,6 @@
 body {
+  overflow-x: hidden;
+  width: 100vw;
   background-color: $body-bgcolor;
   color: $body-color;
   font-family: $montserrat-font;
@@ -32,4 +34,11 @@ body {
     font-weight: 900;
     letter-spacing: 1px;
   }
+}
+
+.heading {
+  font-size: $heading;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-align: center;
 }

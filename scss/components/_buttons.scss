@@ -4,8 +4,8 @@
   height: 70px;
   left: 0;
   right: 0;
+  bottom: 0;
   margin: 0 auto;
-  top: 90%;
   background-color: white;
   display: inline-block;
   text-align: center;
@@ -13,10 +13,6 @@
   border-radius: 50%;
   outline: none;
   -webkit-tap-highlight-color: transparent;
-
-  @media (max-height: 812px) {
-      top: 100%;
-  }
 
   &-download {
     & svg {
@@ -38,7 +34,9 @@
     }
 
     &:hover::after,
-    &:visited::after, &:focus::after, &:focus-visible::after {
+    &:visited::after,
+    &:focus::after,
+    &:focus-visible::after {
       transform: scaleX(2) scaleY(2);
       opacity: 0;
       background-color: red;

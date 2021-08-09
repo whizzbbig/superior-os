@@ -14,40 +14,16 @@
   &__homescreen &__homescreen-img,
   &__superiorsettings &__superiorsettings-img,
   &__updater &__updater-img {
-    max-width: 1500px;
+    max-width: 400px;
     margin: 0 auto;
     padding: 2vw 0;
+
   }
 
   &__homescreen h2,
   &__superiorsettings h2,
   &__updater h2 {
-    text-align: center;
-    font-size: $secondary-heading;
-    font-weight: 900;
-    font-family: $termina-font;
-    animation: strokeLoop 0.5s linear infinite;
-
-    @keyframes strokeLoop {
-      0% {
-        color: $white-color;
-      }
-      20% {
-        color: $body-bgcolor;
-      }
-      40% {
-        color: $yellow-color;
-      }
-      60% {
-        color: $pink-color;
-      }
-      80% {
-        color: $blue-color;
-      }
-      100% {
-        color: $white-color;
-      }
-    }
+    @include PsychedelicHeading($termina-font, $secondary-heading);
   }
 
   &__homescreen p,
