@@ -10,3 +10,13 @@
 * tap the down arrow buttons and open the devtools you made it to the error :)
 * the strip of images also never comes :)
 ```
+
+# File System
+```sh
+|-js
+   |- scrollify.js // its the file contains js about that strip image effect
+
+|-scss
+  |- layout
+     |- _team.scss // its the file contains css about that strip effect
+```
