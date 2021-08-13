@@ -9,6 +9,16 @@ window.addEventListener("load", function () {
     inertia: 0.8,
     smooth: true,
     getDirection: true,
+    mobile: {
+      smooth: true,
+      inertia: 0.8,
+      getDirection: true,
+    },
+    tablet: {
+      smooth: true,
+      inertia: 0.8,
+      getDirection: true,
+    },
   });
 
   scroller.on("scroll", function (t) {
@@ -116,3 +126,4 @@ slider.addEventListener("mousemove", (e) => {
   const walk = (x - startX) * 3; //scroll-fast
   slider.scrollLeft = scrollLeft - walk;
 });
+

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -19,8 +19,30 @@
       href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
     />
     <link rel="stylesheet" href="./scss/style.css" />
+    <script>
+      document.documentElement.className = "js";
+      var supportsCssVars = function () {
+        var e,
+          t = document.createElement("style");
+        return (
+          (t.innerHTML = "root: { --tmp-var: bold; }"),
+          document.head.appendChild(t),
+          (e = !!(
+            window.CSS &&
+            window.CSS.supports &&
+            window.CSS.supports("font-weight", "var(--tmp-var)")
+          )),
+          t.parentNode.removeChild(t),
+          e
+        );
+      };
+      supportsCssVars() ||
+        alert(
+          "Please view this demo in a modern browser that supports CSS Variables."
+        );
+    </script>
   </head>
-  <body>
+  <body class="loading">
     <nav class="nav">
       <a href="#home" class="link">
         <span class="link-icon">
@@ -263,38 +285,411 @@
           </p>
         </div>
       </section>
-        <main id="screenshots" data-bgcolor="#000" data-textcolor="#f5f5f5" class="grid-item main">
-          <h1 class="heading">Screenshots</h1>
-          <div class="items">
-            <div class="item item1">
-              <img src="./img/androidVersion.png" alt="" />
-            </div>
-            <div class="item item2">
-              <img src="./img/home.png" alt="" />
-            </div>
-            <div class="item item3">
-              <img src="./img/lockscreen.png" alt="" />
-            </div>
-            <div class="item item4">
-              <img src="./img/qs.png" alt="" />
-            </div>
-            <div class="item item5">
-              <img src="./img/settings.png" alt="" />
-            </div>
-            <div class="item item6">
-              <img src="./img/superiorSettings.png" alt="" />
-            </div>
-            <div class="item item7">
-              <img src="./img/version.png" alt="" />
-            </div>
+      <main
+        id="screenshots"
+        data-bgcolor="#000"
+        data-textcolor="#f5f5f5"
+        class="grid-item main"
+      >
+        <h1 class="heading">Screenshots</h1>
+        <div class="items">
+          <div class="item item1">
+            <img
+              class="screeenshots__img"
+              src="./img/androidVersion.png"
+              alt=""
+            />
           </div>
-        </main>
-        <div style="height: 100vh;"></div>
+          <div class="item item2">
+            <img class="screeenshots__img" src="./img/home.png" alt="" />
+          </div>
+          <div class="item item3">
+            <img class="screeenshots__img" src="./img/lockscreen.png" alt="" />
+          </div>
+          <div class="item item4">
+            <img class="screeenshots__img" src="./img/qs.png" alt="" />
+          </div>
+          <div class="item item5">
+            <img class="screeenshots__img" src="./img/settings.png" alt="" />
+          </div>
+          <div class="item item6">
+            <img
+              class="screeenshots__img"
+              src="./img/superiorSettings.png"
+              alt=""
+            />
+          </div>
+          <div class="item item7">
+            <img class="screeenshots__img" src="./img/version.png" alt="" />
+          </div>
+        </div>
+      </main>
+
+      <!-- T E A M  SECTION -->
+      <main>
+        <div class="frame">
+          <h3 class="frame__subtitle">Superior OS</h3>
+          <div class="frame__indicator"></div>
+        </div>
+        <div class="strip-outer">
+          <div class="strip-inner">
+            <div class="draggable"></div>
+            <div class="strip">
+              <div class="strip__item">
+                <div class="img-outer img-outer--size-s">
+                  <div
+                    class="img-inner"
+                    style="
+                      background-image: url('https://avatars.githubusercontent.com/u/29405483?v=4');
+                    "
+                  ></div>
+                </div>
+                <span class="strip__item-number"
+                  ><a class="strip__item-link"><span>01</span></a
+                  ><span class="strip__item-plus"></span
+                ></span>
+              </div>
+              <div class="strip__item">
+                <div class="img-outer img-outer--size-m">
+                  <div
+                    class="img-inner"
+                    style="
+                      background-image: url('https://avatars.githubusercontent.com/u/37954829?v=4');
+                    "
+                  ></div>
+                </div>
+                <span class="strip__item-number"
+                  ><a class="strip__item-link"><span>02</span></a
+                  ><span class="strip__item-plus"></span
+                ></span>
+              </div>
+              <div class="strip__item">
+                <div class="img-outer img-outer--size-xl">
+                  <div
+                    class="img-inner"
+                    style="
+                      background-image: url('https://avatars.githubusercontent.com/u/40587889?v=4');
+                    "
+                  ></div>
+                </div>
+                <span class="strip__item-number"
+                  ><a class="strip__item-link"><span>03</span></a
+                  ><span class="strip__item-plus"></span
+                ></span>
+              </div>
+              <div class="strip__item">
+                <div class="img-outer img-outer--size-l">
+                  <div
+                    class="img-inner"
+                    style="
+                      background-image: url('https://avatars.githubusercontent.com/u/22902281?v=4');
+                    "
+                  ></div>
+                </div>
+                <span class="strip__item-number"
+                  ><a class="strip__item-link"><span>04</span></a
+                  ><span class="strip__item-plus"></span
+                ></span>
+              </div>
+              <div class="strip__item">
+                <div class="img-outer img-outer--size-s">
+                  <div
+                    class="img-inner"
+                    style="
+                      background-image: url('https://avatars.githubusercontent.com/u/42634886?v=4');
+                    "
+                  ></div>
+                </div>
+                <span class="strip__item-number"
+                  ><a class="strip__item-link"><span>05</span></a
+                  ><span class="strip__item-plus"></span
+                ></span>
+              </div>
+              <div class="strip__item">
+                <div class="img-outer">
+                  <div
+                    class="img-inner"
+                    style="
+                      background-image: url('https://avatars.githubusercontent.com/u/54703305?v=4');
+                    "
+                  ></div>
+                </div>
+                <span class="strip__item-number"
+                  ><a class="strip__item-link"><span>06</span></a
+                  ><span class="strip__item-plus"></span
+                ></span>
+              </div>
+              <div class="strip__item">
+                <div class="img-outer img-outer--size-s">
+                  <div
+                    class="img-inner"
+                    style="
+                      background-image: url('https://avatars.githubusercontent.com/u/66232233?v=4');
+                    "
+                  ></div>
+                </div>
+                <span class="strip__item-number"
+                  ><a class="strip__item-link"><span>07</span></a
+                  ><span class="strip__item-plus"></span
+                ></span>
+              </div>
+              <div class="strip__item">
+                <div class="img-outer img-outer--size-m">
+                  <div
+                    class="img-inner"
+                    style="
+                      background-image: url('https://avatars.githubusercontent.com/u/37337599?v=4');
+                    "
+                  ></div>
+                </div>
+                <span class="strip__item-number"
+                  ><a class="strip__item-link"><span>08</span></a
+                  ><span class="strip__item-plus"></span
+                ></span>
+              </div>
+              <div class="strip__item">
+                <div class="img-outer img-outer--size-s">
+                  <div
+                    class="img-inner"
+                    style="
+                      background-image: url('https://avatars.githubusercontent.com/u/40316716?v=4');
+                    "
+                  ></div>
+                </div>
+                <span class="strip__item-number"
+                  ><a class="strip__item-link"><span>09</span></a
+                  ><span class="strip__item-plus"></span
+                ></span>
+              </div>
+              <div class="strip__item">
+                <div class="img-outer img-outer--size-l">
+                  <div
+                    class="img-inner"
+                    style="
+                      background-image: url('https://avatars.githubusercontent.com/u/19311643?v=4');
+                    "
+                  ></div>
+                </div>
+                <span class="strip__item-number"
+                  ><a class="strip__item-link"><span>10</span></a
+                  ><span class="strip__item-plus"></span
+                ></span>
+              </div>
+              <div class="strip__item">
+                <div class="img-outer img-outer--size-s">
+                  <div
+                    class="img-inner"
+                    style="
+                      background-image: url('https://avatars.githubusercontent.com/u/43555219?v=4');
+                    "
+                  ></div>
+                </div>
+                <span class="strip__item-number"
+                  ><a class="strip__item-link"><span>11</span></a
+                  ><span class="strip__item-plus"></span
+                ></span>
+              </div>
+            </div>
+            <!--/strip-->
+          </div>
+          <!--/strip-inner-->
+          <div class="strip-cover">
+            <h2 class="strip-cover__title">Superior OS</h2>
+            <span class="strip-cover__subtitle">2019</span>
+          </div>
+        </div>
+        <!--/strip-outer-->
+        <div class="content">
+          <article class="content__item">
+            <div class="img-outer img-outer--content">
+              <div
+                class="img-inner img-inner--content"
+                style="
+                  background-image: url(https://avatars.githubusercontent.com/u/29405483?v=4);
+                "
+              ></div>
+            </div>
+            <div class="content__item-copy">
+              <h2 class="content__item-title">Founder/Developer</h2>
+              <p class="content__item-text">Sipun Ku Mahanta</p>
+            </div>
+          </article>
+          <article class="content__item">
+            <div class="img-outer img-outer--content">
+              <div
+                class="img-inner img-inner--content"
+                style="
+                  background-image: url(https://avatars.githubusercontent.com/u/37954829?v=4);
+                "
+              ></div>
+            </div>
+            <div class="content__item-copy">
+              <h2 class="content__item-title">Developer</h2>
+              <p class="content__item-text">Jayant Deshmukh</p>
+            </div>
+          </article>
+          <article class="content__item">
+            <div class="img-outer img-outer--content">
+              <div
+                class="img-inner img-inner--content"
+                style="
+                  background-image: url(https://avatars.githubusercontent.com/u/40587889?v=4);
+                "
+              ></div>
+            </div>
+            <div class="content__item-copy">
+              <h2 class="content__item-title">UI/UX Developer</h2>
+              <p class="content__item-text">Rahul Mishra</p>
+            </div>
+          </article>
+          <article class="content__item">
+            <div class="img-outer img-outer--content">
+              <div
+                class="img-inner img-inner--content"
+                style="
+                  background-image: url(https://avatars.githubusercontent.com/u/22902281?v=4);
+                "
+              ></div>
+            </div>
+            <div class="content__item-copy">
+              <h2 class="content__item-title">Infrastructure Manager</h2>
+              <p class="content__item-text">Subins Mani</p>
+            </div>
+          </article>
+          <article class="content__item">
+            <div class="img-outer img-outer--content">
+              <div
+                class="img-inner img-inner--content"
+                style="
+                  background-image: url(https://avatars.githubusercontent.com/u/42634886?v=4);
+                "
+              ></div>
+            </div>
+            <div class="content__item-copy">
+              <h2 class="content__item-title">Device Manager</h2>
+              <p class="content__item-text">Rashed Sahaji</p>
+            </div>
+          </article>
+          <article class="content__item">
+            <div class="img-outer img-outer--content">
+              <div
+                class="img-inner img-inner--content"
+                style="
+                  background-image: url(https://avatars.githubusercontent.com/u/54703305?v=4);
+                "
+              ></div>
+            </div>
+            <div class="content__item-copy">
+              <h2 class="content__item-title">
+                Interactive Designer/Developer
+              </h2>
+              <p class="content__item-text">whizzbbig aka Ojas Shukla</p>
+            </div>
+          </article>
+          <article class="content__item">
+            <div class="img-outer img-outer--content">
+              <div
+                class="img-inner img-inner--content"
+                style="
+                  background-image: url(https://avatars.githubusercontent.com/u/66232233?v=4);
+                "
+              ></div>
+            </div>
+            <div class="content__item-copy">
+              <h2 class="content__item-title">Android Developer</h2>
+              <p class="content__item-text">Joker-V2 aka Nipin NA</p>
+            </div>
+          </article>
+          <article class="content__item">
+            <div class="img-outer img-outer--content">
+              <div
+                class="img-inner img-inner--content"
+                style="
+                  background-image: url(https://avatars.githubusercontent.com/u/37337599?v=4);
+                "
+              ></div>
+            </div>
+            <div class="content__item-copy">
+              <h2 class="content__item-title">Project Moderator</h2>
+              <p class="content__item-text">Shreehari Vaasistha</p>
+            </div>
+          </article>
+          <article class="content__item">
+            <div class="img-outer img-outer--content">
+              <div
+                class="img-inner img-inner--content"
+                style="
+                  background-image: url(https://avatars.githubusercontent.com/u/40316716?v=4);
+                "
+              ></div>
+            </div>
+            <div class="content__item-copy">
+              <h2 class="content__item-title">Designer</h2>
+              <p class="content__item-text">Pavan Patel</p>
+            </div>
+          </article>
+          <article class="content__item">
+            <div class="img-outer img-outer--content">
+              <div
+                class="img-inner img-inner--content"
+                style="
+                  background-image: url(https://avatars.githubusercontent.com/u/19311643?v=4);
+                "
+              ></div>
+            </div>
+            <div class="content__item-copy">
+              <h2 class="content__item-title">UI/UX Developer</h2>
+              <p class="content__item-text">Ionut Iacob</p>
+            </div>
+          </article>
+          <article class="content__item">
+            <div class="img-outer img-outer--content">
+              <div
+                class="img-inner img-inner--content"
+                style="
+                  background-image: url(https://avatars.githubusercontent.com/u/43555219?v=4);
+                "
+              ></div>
+            </div>
+            <div class="content__item-copy">
+              <h2 class="content__item-title">Web Developer</h2>
+              <p class="content__item-text">Arun Teltia</p>
+            </div>
+          </article>
+          <button class="content__close" aria-label="Close content">
+            <svg width="12" height="26" viewBox="0 0 12 26">
+              <path
+                d="M5.293 25H5v-.293l-5-5L.707 19 5 23.293V0h1v23.657L10.657 19l.707.707-5.657 5.657-.025-.025-.025.025L5.293 25z"
+              />
+            </svg>
+          </button>
+        </div>
+      </main>
+    </div>
+    <div class="cursor">
+      <div class="cursor__inner cursor__inner--circle">
+        <div class="cursor__side cursor__side--left"></div>
+        <div class="cursor__side cursor__side--right"></div>
+      </div>
     </div>
 
     <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
-    <script src="./main.js"></script>
+    <script src="/js/imagesloaded.pkgd.min.js"></script>
+    <script src="/js/TweenMax.min.js"></script>
+    <script src="/js/draggabilly.pkgd.min.js"></script>
+    <script src="/js/scrollify.js"></script>
+    <script src="/js/main.js"></script>
+    <script>
+      // Preload all the images in the page
+      imagesLoaded(
+        document.querySelectorAll(
+          ".img-inner .features__homescreen-img .features__superiorsettings-img .features__updater-img .screenshots__img .lockscreen"
+        ),
+        { background: true },
+        () => document.body.classList.remove("loading")
+      );
+    </script>
   </body>
 </html>
