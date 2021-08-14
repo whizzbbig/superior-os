@@ -10,14 +10,10 @@ window.addEventListener("load", function () {
     smooth: true,
     getDirection: true,
     mobile: {
-      smooth: false,
-      inertia: 0.8,
-      getDirection: true,
+      smooth: true,
     },
     tablet: {
-      smooth: false,
-      inertia: 0.8,
-      getDirection: true,
+      smooth: true,
     },
   });
 
