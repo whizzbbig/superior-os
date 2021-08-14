@@ -12,10 +12,12 @@ window.addEventListener("load", function () {
     mobile: {
       breakpoint: 0,
       smooth: false,
+      getDirection: true,
     },
     tablet: {
       breakpoint: 0,
       smooth: false,
+      getDirection: true,
     },
   });
 
