@@ -20,3 +20,10 @@
   |- layout
      |- _team.scss // its the file contains css about that strip effect
 ```
+
+## Video
+
+
+https://user-images.githubusercontent.com/54703305/129496857-b4b01504-8e28-4f0d-9d29-a95bc28c855b.mov
+
+
