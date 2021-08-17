@@ -86,16 +86,16 @@
       this.lastScale = 0.4;
     }
     showArrows() {
-      TweenMax.to(Object.values(this.DOM.arrows), 1, {
-        ease: Expo.easeOut,
+      gsap.to(Object.values(this.DOM.arrows), 1, {
+        ease: "expo.easeOut",
         startAt: { x: (i) => (i ? 10 : -10) },
         opacity: 1,
         x: 0,
       });
     }
     hideArrows() {
-      TweenMax.to(Object.values(this.DOM.arrows), 1, {
-        ease: Expo.easeOut,
+      gsap.to(Object.values(this.DOM.arrows), 1, {
+        ease: "expo.easeOut",
         x: (i) => (i ? 10 : -10),
         opacity: 0,
       });
@@ -115,12 +115,12 @@
       // Hovering the number makes it slide out/in
       this.DOM.number.addEventListener("mouseenter", () => {
         const inner = this.DOM.number.querySelector("span");
-        new TimelineMax()
+        new gsap.timeline()
           .to(
             inner,
-            0.2,
             {
-              ease: Quad.easeOut,
+              ease: "quad.easeOut",
+              duration: 0.2,
               y: "-100%",
               opacity: 0,
             },
@@ -128,9 +128,9 @@
           )
           .to(
             inner,
-            0.5,
             {
-              ease: Expo.easeOut,
+              ease: "expo.easeOut",
+              duration: 0.5,
               startAt: { y: "100%", opacity: 0, scale: 1.3 },
               y: "0%",
               opacity: 1,
@@ -141,8 +141,8 @@
 
       this.DOM.number.addEventListener("mouseleave", () => {
         const inner = this.DOM.number.querySelector("span");
-        TweenMax.killTweensOf(inner);
-        TweenMax.set(inner, {
+        gsap.killTweensOf(inner);
+        gsap.set(inner, {
           scale: 1,
           y: "0%",
           opacity: 1,
@@ -213,23 +213,23 @@
           );
         }
 
-        TweenMax.set(this.DOM.strip, {
+        gsap.set(this.DOM.strip, {
           x: this.renderedStyles.position.previous,
         });
         for (const item of this.items) {
-          TweenMax.set(item.DOM.el, {
+          gsap.set(item.DOM.el, {
             scale: this.renderedStyles.scale.previous,
             opacity: this.renderedStyles.opacity.previous,
           });
-          TweenMax.set(item.DOM.image, {
+          gsap.set(item.DOM.image, {
             scale: this.renderedStyles.imgScale.previous,
           });
         }
-        TweenMax.set(this.DOM.cover, {
+        gsap.set(this.DOM.cover, {
           scale: this.renderedStyles.coverScale.previous,
           opacity: this.renderedStyles.coverOpacity.previous,
         });
-        TweenMax.set(this.DOM.indicator, {
+        gsap.set(this.DOM.indicator, {
           scaleX: this.renderedStyles.indicatorScale.previous,
         });
 
@@ -343,9 +343,9 @@
       contentItem.DOM.el.classList.add("content__item--current");
 
       // Fix for mobile (make sure the cover is not visible when clicking the numbers)
-      TweenMax.set(this.DOM.cover, { scale: 0, opacity: 0 });
+      gsap.set(this.DOM.cover, { scale: 0, opacity: 0 });
 
-      this.contentToggleTimeline = new TimelineMax({
+      this.contentToggleTimeline = new gsap.timeline({
         onComplete: () => (this.isAnimating = false),
       })
         .set(
@@ -364,7 +364,7 @@
           this.items.map((item) => item.DOM.el),
           0.8,
           {
-            ease: Cubic.easeOut,
+            ease: "cubic.easeOut",
             scale: 0.8,
             opacity: 0.4,
           },
@@ -374,7 +374,7 @@
           this.items.map((item) => item.DOM.image),
           0.8,
           {
-            ease: Cubic.easeOut,
+            ease: "cubic.easeOut",
             scale: 1.6,
           },
           0
@@ -383,7 +383,7 @@
           this.DOM.indicator,
           0.8,
           {
-            ease: Cubic.easeOut,
+            ease: "cubic.easeOut",
             scaleX: 0,
           },
           0
@@ -394,7 +394,7 @@
           item.DOM.el,
           1,
           {
-            ease: Expo.easeInOut,
+            ease: "expo.easeInOut",
             y: winsize.height * -1,
           },
           MathUtils.getRandomFloat(0.2, 0.4)
@@ -406,7 +406,7 @@
           contentItem.DOM.image,
           1,
           {
-            ease: Expo.easeInOut,
+            ease: "expo.easeInOut",
             startAt: { y: winsize.height * 1.3, opacity: 1 },
             y: 0,
           },
@@ -416,7 +416,7 @@
           contentItem.DOM.title,
           0.8,
           {
-            ease: Quint.easeOut,
+            ease: "quint.easeOut",
             startAt: { y: 100 },
             y: 0,
             opacity: 1,
@@ -427,7 +427,7 @@
           contentItem.DOM.text,
           0.8,
           {
-            ease: Quint.easeOut,
+            ease: "quint.easeOut",
             startAt: { y: 200 },
             y: 0,
             opacity: 1,
@@ -438,7 +438,7 @@
           closeContentCtrl,
           0.8,
           {
-            ease: Quint.easeOut,
+            ease: "quint.easeOut",
             startAt: { y: 50 },
             y: 0,
             opacity: 1,
@@ -453,7 +453,7 @@
       this.isAnimating = true;
 
       const contentItem = contentItems[this.current];
-      this.contentToggleTimeline = new TimelineMax({
+      this.contentToggleTimeline = new gsap.timeline({
         onComplete: () => {
           contentItem.DOM.el.classList.remove("content__item--current");
           this.isAnimating = false;
@@ -479,7 +479,7 @@
           contentItem.DOM.text,
           0.8,
           {
-            ease: Quint.easeIn,
+            ease: "quint.easeIn",
             y: 200,
             opacity: 0,
           },
@@ -489,7 +489,7 @@
           contentItem.DOM.title,
           0.8,
           {
-            ease: Quint.easeIn,
+            ease: "quint.easeIn",
             y: 100,
             opacity: 0,
           },
@@ -499,7 +499,7 @@
           closeContentCtrl,
           0.8,
           {
-            ease: Quint.easeOut,
+            ease: "quint.easeOut",
             y: 50,
             opacity: 0,
           },
@@ -509,7 +509,7 @@
           contentItem.DOM.image,
           1,
           {
-            ease: Expo.easeInOut,
+            ease: "expo.easeInOut",
             y: winsize.height * 1.3,
             opacity: 1,
           },
@@ -521,7 +521,7 @@
           item.DOM.el,
           MathUtils.getRandomFloat(0.6, 0.9),
           {
-            ease: Expo.easeInOut,
+            ease: "expo.easeInOut",
             y: 0,
           },
           MathUtils.getRandomFloat(0.4, 0.6));
@@ -533,7 +533,7 @@
         this.DOM.indicator,
         1.2,
         {
-          ease: Expo.easeOut,
+          ease: "expo.easeOut",
           scaleX: 1,
         },
         0.5
