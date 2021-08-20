@@ -1,13 +1,3 @@
-/**
- * demo.js
- * http://www.codrops.com
- *
- * Licensed under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- *
- * Copyright 2019, Codrops
- * http://www.codrops.com
- */
 {
   const body = document.body;
 
@@ -87,7 +77,7 @@
     }
     showArrows() {
       gsap.to(Object.values(this.DOM.arrows), 1, {
-        ease: "expo.easeOut",
+        ease: Expo.easeOut,
         startAt: { x: (i) => (i ? 10 : -10) },
         opacity: 1,
         x: 0,
@@ -95,7 +85,7 @@
     }
     hideArrows() {
       gsap.to(Object.values(this.DOM.arrows), 1, {
-        ease: "expo.easeOut",
+        ease: Expo.easeOut,
         x: (i) => (i ? 10 : -10),
         opacity: 0,
       });
@@ -119,7 +109,7 @@
           .to(
             inner,
             {
-              ease: "quad.easeOut",
+              ease: Quad.easeOut,
               duration: 0.2,
               y: "-100%",
               opacity: 0,
@@ -129,7 +119,7 @@
           .to(
             inner,
             {
-              ease: "expo.easeOut",
+              ease: Expo.easeOut,
               duration: 0.5,
               startAt: { y: "100%", opacity: 0, scale: 1.3 },
               y: "0%",
@@ -362,9 +352,9 @@
         )
         .to(
           this.items.map((item) => item.DOM.el),
-          0.8,
           {
-            ease: "cubic.easeOut",
+            duration: 0.8,
+            ease: Cubic.easeOut,
             scale: 0.8,
             opacity: 0.4,
           },
@@ -372,18 +362,18 @@
         )
         .to(
           this.items.map((item) => item.DOM.image),
-          0.8,
           {
-            ease: "cubic.easeOut",
+            duration: 0.8,
+            ease: Cubic.easeOut,
             scale: 1.6,
           },
           0
         )
         .to(
           this.DOM.indicator,
-          0.8,
           {
-            ease: "cubic.easeOut",
+            duration: 0.8,
+            ease: Cubic.easeOut,
             scaleX: 0,
           },
           0
@@ -392,9 +382,9 @@
       for (const item of this.items) {
         this.contentToggleTimeline.to(
           item.DOM.el,
-          1,
           {
-            ease: "expo.easeInOut",
+            duration: 1,
+            ease: Expo.easeInOut,
             y: winsize.height * -1,
           },
           MathUtils.getRandomFloat(0.2, 0.4)
@@ -404,9 +394,10 @@
       this.contentToggleTimeline
         .to(
           contentItem.DOM.image,
-          1,
+
           {
-            ease: "expo.easeInOut",
+            duration: 1,
+            ease: Expo.easeInOut,
             startAt: { y: winsize.height * 1.3, opacity: 1 },
             y: 0,
           },
@@ -414,9 +405,9 @@
         )
         .to(
           contentItem.DOM.title,
-          0.8,
           {
-            ease: "quint.easeOut",
+            duration: 0.8,
+            ease: Quint.easeOut,
             startAt: { y: 100 },
             y: 0,
             opacity: 1,
@@ -425,9 +416,9 @@
         )
         .to(
           contentItem.DOM.text,
-          0.8,
           {
-            ease: "quint.easeOut",
+            duration: 0.8,
+            ease: Quint.easeOut,
             startAt: { y: 200 },
             y: 0,
             opacity: 1,
@@ -436,9 +427,9 @@
         )
         .to(
           closeContentCtrl,
-          0.8,
           {
-            ease: "quint.easeOut",
+            duration: 0.8,
+            ease: Quint.easeOut,
             startAt: { y: 50 },
             y: 0,
             opacity: 1,
@@ -479,7 +470,7 @@
           contentItem.DOM.text,
           0.8,
           {
-            ease: "quint.easeIn",
+            ease: Quint.easeIn,
             y: 200,
             opacity: 0,
           },
@@ -489,7 +480,7 @@
           contentItem.DOM.title,
           0.8,
           {
-            ease: "quint.easeIn",
+            ease: Quint.easeIn,
             y: 100,
             opacity: 0,
           },
@@ -499,41 +490,41 @@
           closeContentCtrl,
           0.8,
           {
-            ease: "quint.easeOut",
+            ease: Quint.easeOut,
             y: 50,
             opacity: 0,
           },
-          0.2
+          .2
         )
         .to(
           contentItem.DOM.image,
           1,
           {
-            ease: "expo.easeInOut",
+            ease: Expo.easeOut,
             y: winsize.height * 1.3,
             opacity: 1,
           },
-          0.2
+         .2
         );
 
       for (const item of this.items) {
         this.contentToggleTimeline.to(
           item.DOM.el,
-          MathUtils.getRandomFloat(0.6, 0.9),
+
           {
-            ease: "expo.easeInOut",
+            duration: MathUtils.getRandomFloat(0.6, 0.9),
+            ease: Expo.easeOut,
             y: 0,
           },
-          MathUtils.getRandomFloat(0.4, 0.6));
-          
+          MathUtils.getRandomFloat(0.4, 0.6)
+        );
       }
-
 
       this.contentToggleTimeline.to(
         this.DOM.indicator,
-        1.2,
         {
-          ease: "expo.easeOut",
+          duration: 1.2,
+          ease: Expo.easeOut,
           scaleX: 1,
         },
         0.5
