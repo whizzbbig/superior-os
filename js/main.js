@@ -127,3 +127,37 @@ slider.addEventListener("mousemove", (e) => {
   slider.scrollLeft = scrollLeft - walk;
 });
 
+// Add Year Automatically To Footer
+const d = new Date();
+const n = d.getFullYear();
+document.getElementById("date").innerHTML = n;
+
+// Preloader 
+var animation = bodymovin.loadAnimation({
+  container: document.getElementById("bm"),
+  renderer: "svg",
+  loop: true,
+  autoplay: true,
+  path: "./data.json",
+});
+
+// PRELOAD ALL THE IMAGES IN THE PAGE
+
+const images = document.querySelectorAll("img");
+
+const imgLoad = imagesLoaded(images);
+
+imgLoad.on( 'always', function() {
+  // console.log( imgLoad.images.length + ' images loaded' );
+  // // detect which image is broken
+  // for ( let i = 0, len = imgLoad.images.length; i < len; i++ ) {
+  //   const image = imgLoad.images[i];
+  //   const result = image.isLoaded ? 'loaded' : 'broken';
+  //   console.log( 'image is ' + result + ' for ' + image.img.src );
+  // }
+
+  setTimeout( () => {
+  document.querySelector('.loading').style.display = 'none';
+  document.body.style.overflowY = "scroll";
+}, 2500);
+});

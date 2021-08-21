@@ -49,7 +49,10 @@
         );
     </script>
   </head>
-  <body class="loading">
+  <body>
+    <div class="loading">
+      <div id="bm"></div>
+    </div>
     <nav class="nav">
       <a href="#home" class="link">
         <span class="link-icon">
@@ -707,7 +710,9 @@
                   ></path></svg
               ></span>
               by &ThickSpace;
-               <div class="footer__credit-link"><a href="https://t.me/whizzbbig">whizzbbig</a></div>
+              <div class="footer__credit-link">
+                <a href="https://t.me/whizzbbig">whizzbbig</a>
+              </div>
             </h4>
           </div>
         </div>
@@ -733,7 +738,19 @@
         <div class="cursor__side cursor__side--right"></div>
       </div>
     </div>
-
+    
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.12/lottie.min.js"
+      integrity="sha512-Dr2QERtNqLw0I06FR7G73CjiWvR4roRMDNTbOGp+qeGhVjEl0xs4AKZzqVFREqdOL3t8ei7H9y9XUcpYVkwEIQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"
+      integrity="sha512-UxP+UhJaGRWuMG2YC6LPWYpFQnsSgnor0VUF3BHdD83PS/pOpN+FYbZmrYN+ISX8jnvgVUciqP/fILOXDjZSwg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script src="./js/locomotive-scroll.min.js"></script>
@@ -741,19 +758,5 @@
     <script src="/js/draggabilly.pkgd.min.js"></script>
     <script src="/js/imagestrip.js"></script>
     <script src="/js/main.js"></script>
-    <script>
-      // Preload all the images in the page
-      imagesLoaded(
-        document.querySelectorAll(
-          ".img-inner .features__homescreen-img .features__superiorsettings-img .features__updater-img .screenshots__img .lockscreen"
-        ),
-        { background: true },
-        () => document.body.classList.remove("loading")
-      );
-
-      const d = new Date();
-      const n = d.getFullYear();
-      document.getElementById("date").innerHTML = n;
-    </script>
   </body>
 </html>
