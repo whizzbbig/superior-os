@@ -715,7 +715,6 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-bottom: 25rem;
 }
 
 .message {
