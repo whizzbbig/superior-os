@@ -3,7 +3,7 @@
   height: 50vh;
   text-align: center;
   font-size: 2rem;
-  margin-bottom: 30rem;
+  margin-bottom: 20rem;
 
   @media (min-width: 1000px) {
     display: none;
@@ -25,15 +25,16 @@
   }
 
   &__credit {
-    span:last-child {
-      a {
-        animation: strokeLoop 0.5s linear infinite;
-        transition: all 0.2s ease-in-out;
+    a {
+      // animation: strokeLoop 0.5s linear infinite;
+      transition: all 0.2s ease-in-out;
 
-        &:hover, &:focus, &:active, &:visited {
-          animation-play-state: paused;
-          @include linkHover;
-        }
+      &:hover,
+      &:focus,
+      &:active,
+      &:visited {
+        animation-play-state: paused;
+        @include linkHover;
       }
     }
   }

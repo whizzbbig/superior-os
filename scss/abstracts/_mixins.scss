@@ -3,7 +3,7 @@
   font-size: $heading-size;
   font-weight: 900;
   font-family: $font;
-  animation: strokeLoop .5s linear infinite;
+  animation: strokeLoop 0.5s linear infinite;
 
   @keyframes strokeLoop {
     0% {
@@ -11,15 +11,19 @@
     }
     20% {
       color: $body-bgcolor;
+      opacity: 0.7;
     }
     40% {
       color: $yellow-color;
+      opacity: 0.7;
     }
     60% {
       color: $pink-color;
+      opacity: 0.7;
     }
     80% {
       color: $blue-color;
+      opacity: 0.7;
     }
     100% {
       color: $white-color;
@@ -29,6 +33,6 @@
 
 @mixin linkHover {
   font-weight: $heavy;
-  transition: all .1s ease-in;
+  transition: all 0.1s ease-in;
   transform: scale(1.1);
 }

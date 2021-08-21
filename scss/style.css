@@ -115,7 +115,7 @@ img {
 body {
   overflow-x: hidden;
   width: 100vw;
-  background-color: #EF3E36;
+  background-color: #f85950;
   color: #000;
   font-family: montserrat, sans-serif;
   font-size: 1.5rem;
@@ -206,7 +206,7 @@ body {
   height: 50vh;
   text-align: center;
   font-size: 2rem;
-  margin-bottom: 30rem;
+  margin-bottom: 20rem;
 }
 
 @media (min-width: 1000px) {
@@ -231,22 +231,20 @@ body {
 
 .footer__copyright span:last-child {
   font-weight: 700;
-  color: #EF3E36;
+  color: #f85950;
 }
 
-.footer__credit span:last-child a {
-  -webkit-animation: strokeLoop 0.5s linear infinite;
-          animation: strokeLoop 0.5s linear infinite;
+.footer__credit a {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
-.footer__credit span:last-child a:hover, .footer__credit span:last-child a:focus, .footer__credit span:last-child a:active, .footer__credit span:last-child a:visited {
+.footer__credit a:hover, .footer__credit a:focus, .footer__credit a:active, .footer__credit a:visited {
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
   font-weight: 800;
-  -webkit-transition: all .1s ease-in;
-  transition: all .1s ease-in;
+  -webkit-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
@@ -267,14 +265,14 @@ body {
 
 .footer__nav-link:hover {
   font-weight: 800;
-  -webkit-transition: all .1s ease-in;
-  transition: all .1s ease-in;
+  -webkit-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
 #color {
-  stroke: #EF3E36;
+  stroke: #f85950;
   stroke-width: 3px;
   fill: none;
   display: inline-block;
@@ -555,9 +553,8 @@ body {
   font-size: 4rem;
   font-weight: 900;
   font-family: termina, sans-serif;
-  -webkit-animation: strokeLoop .5s linear infinite;
-          animation: strokeLoop .5s linear infinite;
-  display: none;
+  -webkit-animation: strokeLoop 0.5s linear infinite;
+          animation: strokeLoop 0.5s linear infinite;
 }
 
 @-webkit-keyframes strokeLoop {
@@ -565,16 +562,20 @@ body {
     color: #fff;
   }
   20% {
-    color: #EF3E36;
+    color: #f85950;
+    opacity: 0.7;
   }
   40% {
     color: #FFFB46;
+    opacity: 0.7;
   }
   60% {
     color: #DE4D86;
+    opacity: 0.7;
   }
   80% {
     color: #090C9B;
+    opacity: 0.7;
   }
   100% {
     color: #fff;
@@ -586,16 +587,20 @@ body {
     color: #fff;
   }
   20% {
-    color: #EF3E36;
+    color: #f85950;
+    opacity: 0.7;
   }
   40% {
     color: #FFFB46;
+    opacity: 0.7;
   }
   60% {
     color: #DE4D86;
+    opacity: 0.7;
   }
   80% {
     color: #090C9B;
+    opacity: 0.7;
   }
   100% {
     color: #fff;
@@ -847,7 +852,7 @@ main {
 }
 
 .strip__item-link span {
-  color: #EF3E36;
+  color: #f85950;
   font-family: termina, sans-serif;
   font-size: 2.5rem;
   font-weight: 900;
@@ -938,7 +943,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #EF3E36;
+  color: #f85950;
   pointer-events: none;
   opacity: 0;
 }
@@ -949,7 +954,7 @@ main {
   text-align: center;
   margin: 0;
   line-height: 1;
-  color: #EF3E36;
+  color: #f85950;
 }
 
 .strip-cover__subtitle {
@@ -986,7 +991,7 @@ main {
 
 .content__item-title {
   font-weight: normal;
-  color: #EF3E36;
+  color: #f85950;
   will-change: transform;
 }
 
@@ -1097,7 +1102,7 @@ main {
   }
   .strip-cover__title {
     font-size: 10vw;
-    -webkit-text-stroke: 2px #EF3E36;
+    -webkit-text-stroke: 2px #f85950;
   }
   .strip-cover__subtitle {
     font-size: 3rem;
