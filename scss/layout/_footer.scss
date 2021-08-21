@@ -30,7 +30,7 @@
         animation: strokeLoop 0.5s linear infinite;
         transition: all 0.2s ease-in-out;
 
-        &:hover {
+        &:hover, &:focus, &:active, &:visited {
           animation-play-state: paused;
           @include linkHover;
         }

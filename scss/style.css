@@ -241,7 +241,7 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
-.footer__credit span:last-child a:hover {
+.footer__credit span:last-child a:hover, .footer__credit span:last-child a:focus, .footer__credit span:last-child a:active, .footer__credit span:last-child a:visited {
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
   font-weight: 800;
