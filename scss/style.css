@@ -234,15 +234,14 @@ body {
   color: #EF3E36;
 }
 
-.footer__credit span:last-child {
-  -webkit-animation: strokeLoop .5s linear infinite;
-          animation: strokeLoop .5s linear infinite;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-  cursor: pointer;
+.footer__credit span:last-child a {
+  -webkit-animation: strokeLoop 0.5s linear infinite;
+          animation: strokeLoop 0.5s linear infinite;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
-.footer__credit span:last-child:hover {
+.footer__credit span:last-child a:hover {
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
   font-weight: 800;
