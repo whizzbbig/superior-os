@@ -206,6 +206,7 @@ body {
   height: 50vh;
   text-align: center;
   font-size: 2rem;
+  margin-bottom: 30rem;
 }
 
 @media (min-width: 1000px) {
