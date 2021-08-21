@@ -27,6 +27,7 @@
   &__superiorsettings h2,
   &__updater h2 {
     @include PsychedelicHeading($termina-font, $secondary-heading);
+    display: none;
   }
 
   &__homescreen p,
