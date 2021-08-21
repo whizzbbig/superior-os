@@ -234,12 +234,27 @@ body {
   color: #f85950;
 }
 
-.footer__credit a {
+.footer__credit-link {
+  -webkit-animation: strokeLoop 0.5s linear infinite;
+          animation: strokeLoop 0.5s linear infinite;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  margin-top: 1rem;
+  display: inline-block;
 }
 
-.footer__credit a:hover, .footer__credit a:focus, .footer__credit a:active, .footer__credit a:visited {
+.footer__credit-link:hover, .footer__credit-link:focus, .footer__credit-link:active {
+  display: inline-block;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  font-weight: 800;
+  -webkit-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.footer__credit a:hover, .footer__credit a:focus, .footer__credit a:active {
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
   font-weight: 800;

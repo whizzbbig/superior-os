@@ -25,14 +25,24 @@
   }
 
   &__credit {
-    a {
-      // animation: strokeLoop 0.5s linear infinite;
+    &-link {
+      animation: strokeLoop 0.5s linear infinite;
       transition: all 0.2s ease-in-out;
+      margin-top: 1rem;
+      display: inline-block;
 
       &:hover,
+      &:focus ,
+      &:active {
+        display: inline-block;
+        animation-play-state: paused;
+        @include linkHover;
+      }
+    }
+    a {
+      &:hover,
       &:focus,
-      &:active,
-      &:visited {
+      &:active {
         animation-play-state: paused;
         @include linkHover;
       }
