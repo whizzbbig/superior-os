@@ -945,9 +945,9 @@ main {
 
 .strip-cover {
   width: 100%;
-  height: 100%;
+  height: 50%;
   position: absolute;
-  top: 0;
+  top: 28%;
   left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1101,6 +1101,10 @@ main {
   .frame__indicator {
     grid-area: indicator;
     margin: 2rem 0;
+  }
+  .strip-cover {
+    height: 100%;
+    top: 0;
   }
   .content__item {
     top: 0;
