@@ -30,6 +30,7 @@
         span:last-child {
             animation: strokeLoop .5s linear infinite;
             transition: all .2s ease-in-out;
+            cursor: pointer;
 
             &:hover {
                 animation-play-state: paused;

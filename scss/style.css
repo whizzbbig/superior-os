@@ -239,6 +239,7 @@ body {
           animation: strokeLoop .5s linear infinite;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
+  cursor: pointer;
 }
 
 .footer__credit span:last-child:hover {
