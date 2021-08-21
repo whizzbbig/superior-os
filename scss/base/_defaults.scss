@@ -18,6 +18,21 @@ section:not(.horizontal-scroll) {
   place-items: center;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  width: 100%;
+  max-width: 350px;
+  object-fit: cover;
+
+  @media (max-height: 640px) {
+    max-width: 250px;
+  }
+}
+
 .horizontal-scroll {
   height: 100vh;
   overflow: hidden;
@@ -33,16 +48,6 @@ section:not(.horizontal-scroll) {
 
   & > * {
     padding: 0 5vw;
-  }
-}
-
-img {
-  width: 100%;
-  max-width: 350px;
-  object-fit: cover;
-
-  @media (max-height: 640px) {
-    max-width: 250px;
   }
 }
 

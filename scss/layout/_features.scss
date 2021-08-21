@@ -17,6 +17,10 @@
     max-width: 400px;
     margin: 0 auto;
     padding: 2vw 0;
+
+    @media (min-width: 1000px) {
+      display: none;
+    }
   }
 
   &__homescreen h2,
@@ -32,6 +36,9 @@
     letter-spacing: 0.5px;
     font-weight: 900;
     line-height: 1.5;
+    @media (min-width: 1000px) {
+      display: none;
+    }
   }
 
   &__heading {

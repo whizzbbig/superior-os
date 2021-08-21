@@ -19,3 +19,13 @@
 @import "./layout/screenshots";
 @import "./layout/team";
 @import "./layout/navigation";
+
+.in-progress {
+    display: none;
+    width: 0;
+
+    @media (min-width: 1000px) {
+        display: block;
+        width: 100%;
+    }
+}

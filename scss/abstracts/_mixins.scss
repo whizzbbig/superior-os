@@ -26,3 +26,9 @@
     }
   }
 }
+
+@mixin linkHover {
+  font-weight: $heavy;
+  transition: all .1s ease-in;
+  transform: scale(1.1);
+}

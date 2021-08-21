@@ -19,6 +19,24 @@ section:not(.horizontal-scroll) {
   place-items: center;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  width: 100%;
+  max-width: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-height: 640px) {
+  img {
+    max-width: 250px;
+  }
+}
+
 .horizontal-scroll {
   height: 100vh;
   overflow: hidden;
@@ -44,19 +62,6 @@ section:not(.horizontal-scroll) {
 
 .pin-wrap > * {
   padding: 0 5vw;
-}
-
-img {
-  width: 100%;
-  max-width: 350px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-@media (max-height: 640px) {
-  img {
-    max-width: 250px;
-  }
 }
 
 .cursor {
@@ -196,6 +201,143 @@ body {
   background-color: red;
 }
 
+.footer {
+  width: 100%;
+  height: 50vh;
+  text-align: center;
+  font-size: 2rem;
+}
+
+@media (min-width: 1000px) {
+  .footer {
+    display: none;
+  }
+}
+
+.footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 20%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 20rem;
+}
+
+.footer__copyright span:last-child {
+  font-weight: 700;
+  color: #EF3E36;
+}
+
+.footer__credit span:last-child {
+  -webkit-animation: strokeLoop .5s linear infinite;
+          animation: strokeLoop .5s linear infinite;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.footer__credit span:last-child:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  font-weight: 800;
+  -webkit-transition: all .1s ease-in;
+  transition: all .1s ease-in;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.footer__nav {
+  list-style: none;
+  list-style-type: none;
+  width: 70%;
+  margin: 0 15% 0 15%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  grid-gap: 40px;
+}
+
+.footer__nav-link:hover {
+  font-weight: 800;
+  -webkit-transition: all .1s ease-in;
+  transition: all .1s ease-in;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#color {
+  stroke: #EF3E36;
+  stroke-width: 3px;
+  fill: none;
+  display: inline-block;
+  -webkit-transform: translateY(10px) scale(0);
+          transform: translateY(10px) scale(0);
+}
+
+#color path {
+  -webkit-animation: beat 1s infinite forwards;
+          animation: beat 1s infinite forwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+@-webkit-keyframes beat {
+  0%,
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  5% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  27% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  35% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  57% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes beat {
+  0%,
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  5% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  27% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  35% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  57% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 .header {
   position: relative;
   height: 100vh;
@@ -286,7 +428,7 @@ body {
 .header__mobile-view .caption__heading {
   position: relative;
   white-space: nowrap;
-  -webkit-text-stroke: 3px #1b1111;
+  -webkit-text-stroke: 3px #152f23;
   color: transparent;
 }
 
@@ -397,6 +539,14 @@ body {
   padding: 2vw 0;
 }
 
+@media (min-width: 1000px) {
+  .features__homescreen .features__homescreen-img,
+  .features__superiorsettings .features__superiorsettings-img,
+  .features__updater .features__updater-img {
+    display: none;
+  }
+}
+
 .features__homescreen h2,
 .features__superiorsettings h2,
 .features__updater h2 {
@@ -457,6 +607,14 @@ body {
   letter-spacing: 0.5px;
   font-weight: 900;
   line-height: 1.5;
+}
+
+@media (min-width: 1000px) {
+  .features__homescreen p,
+  .features__superiorsettings p,
+  .features__updater p {
+    display: none;
+  }
 }
 
 .features__heading {
@@ -544,7 +702,7 @@ main {
 .frame {
   padding: 1.5rem;
   position: absolute;
-  top: 0;
+  top: 10%;
   left: 0;
   z-index: 1000;
   pointer-events: none;
@@ -884,6 +1042,7 @@ main {
 @media screen and (min-width: 53em) {
   .frame {
     position: absolute;
+    top: 0;
     z-index: 10000;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1123,5 +1282,17 @@ main {
 
 .screenshots .link-title {
   margin-left: 1rem;
+}
+
+.in-progress {
+  display: none;
+  width: 0;
+}
+
+@media (min-width: 1000px) {
+  .in-progress {
+    display: block;
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
