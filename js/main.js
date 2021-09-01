@@ -212,11 +212,6 @@ const loadingAnimation = () => {
         if (isLoaded) entranceAnimation();
       },
     })
-    .from(".loading", {
-      yPercent: 100,
-      ease: "power3.inOut",
-      duration: 1,
-    })
     .from(
       "#bm",
       {
