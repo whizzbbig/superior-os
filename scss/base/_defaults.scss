@@ -13,6 +13,12 @@ body {
   overflow-y: hidden;
   overflow-x: hidden;
   width: 100vw;
+
+  .content {
+    // PRELOADER STYLES
+    opacity: 0;
+    transform: translateY(100px);
+  }
 }
 
 section:not(.horizontal-scroll) {
@@ -45,6 +51,7 @@ img {
   display: flex;
   left: 0;
 }
+
 .pin-wrap {
   height: 100vh;
   display: flex;
@@ -76,4 +83,9 @@ img {
     top: 0;
     display: grid;
   }
+}
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
 }

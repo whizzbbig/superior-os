@@ -1,8 +1,7 @@
 body {
-  background-color: $body-bgcolor;
-  color: $body-color;
   font-family: $montserrat-font;
   font-size: 1.5rem;
+  background: $body-bgcolor;
 }
 
 .header__heading {
@@ -13,6 +12,11 @@ body {
   overflow-wrap: break-word;
   hyphens: auto;
   line-height: 8rem;
+
+  @media (min-width: 1200px) {
+    font-size: 10rem;
+    line-height: 12rem;
+  }
 }
 
 .caption {
@@ -26,7 +30,6 @@ body {
 }
 
 .features {
-
   &__heading {
     font-size: $heading;
     font-weight: 900;

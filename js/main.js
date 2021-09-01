@@ -127,12 +127,27 @@ slider.addEventListener("mousemove", (e) => {
   slider.scrollLeft = scrollLeft - walk;
 });
 
+// Desktop View
+
+// Adding scene to a app
+const app = new SpeRuntime.Application();
+app.start("../scene.json");
+
+// Disable Scroll on container of scene and on scene
+const disableScroll = () => {
+  const mockupContainer = document.querySelector("#mockup-container");
+  mockupContainer.scrollTo(0, 0);
+  mockupContainer.style.overflow = "hidden";
+};
+
+disableScroll();
+
 // Add Year Automatically To Footer
 const d = new Date();
 const n = d.getFullYear();
 document.getElementById("date").innerHTML = n;
 
-// Preloader 
+// PRELOADER
 var animation = bodymovin.loadAnimation({
   container: document.getElementById("bm"),
   renderer: "svg",
@@ -141,23 +156,67 @@ var animation = bodymovin.loadAnimation({
   path: "./data.json",
 });
 
-// PRELOAD ALL THE IMAGES IN THE PAGE
-
 const images = document.querySelectorAll("img");
-
+let isLoaded = false;
+let isLoadingAnimationEnd = false;
 const imgLoad = imagesLoaded(images);
 
-imgLoad.on( 'always', function() {
-  // console.log( imgLoad.images.length + ' images loaded' );
-  // // detect which image is broken
-  // for ( let i = 0, len = imgLoad.images.length; i < len; i++ ) {
-  //   const image = imgLoad.images[i];
-  //   const result = image.isLoaded ? 'loaded' : 'broken';
-  //   console.log( 'image is ' + result + ' for ' + image.img.src );
-  // }
+const entranceAnimation = () => {
+  const tl = gsap.timeline();
+  tl.to("#bm", {
+    y: -100,
+    duration: 1,
+    ease: "power2.inOut",
+  })
+    .to(
+      ".loading",
+      {
+        yPercent: -100,
+        duration: 1.25,
+        ease: "power4.inOut",
+      },
+      0
+    )
+    .to(
+      ".content",
+      {
+        duration: 1,
+        opacity: 1,
+        y: 0,
+        stagger: 0.1,
+        ease: "power2.out",
+      },
+      0.6
+    );
+};
 
-  setTimeout( () => {
-  document.querySelector('.loading').style.display = 'none';
-  document.body.style.overflowY = "scroll";
-}, 2500);
+const loadingAnimation = () => {
+  const tl = gsap
+    .timeline({
+      onComplete: () => {
+        isLoadingAnimationEnd = true;
+        if (isLoaded) entranceAnimation();
+      },
+    })
+    .from(".loading", {
+      yPercent: 100,
+      ease: "power3.inOut",
+      duration: 1,
+    })
+    .from(
+      "#bm",
+      {
+        y: 80,
+        duration: 1,
+        ease: "power2.out",
+      },
+      0.5
+    );
+};
+
+loadingAnimation();
+
+imgLoad.on("always", function () {
+  isLoaded = true;
+  if (isLoadingAnimationEnd) entranceAnimation();
 });

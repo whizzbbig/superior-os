@@ -5,10 +5,19 @@
   text-align: left;
   align-items: center;
 
+  &__mobile-container {
+    display: none;
+    width: 0;
+  }
+
   &__homescreen,
   &__superiorsettings,
   &__updater {
     padding: 10vw 0;
+
+    @media (min-width: 1200px) {
+      width: 50vw;
+    }
   }
 
   &__homescreen &__homescreen-img,
@@ -17,10 +26,6 @@
     max-width: 400px;
     margin: 0 auto;
     padding: 2vw 0;
-
-    @media (min-width: 1000px) {
-      display: none;
-    }
   }
 
   &__homescreen h2,
@@ -36,13 +41,14 @@
     letter-spacing: 0.5px;
     font-weight: 900;
     line-height: 1.5;
-    @media (min-width: 1000px) {
-      display: none;
-    }
   }
 
   &__heading {
     text-align: center;
     margin-bottom: 5rem;
+
+    @media (min-width: 1200px) {
+      width: 100vw;
+    }
   }
 }

@@ -14,13 +14,12 @@
     height: 20%;
     flex-direction: column;
     justify-content: space-around;
-    margin-bottom: 20rem;
   }
 
   &__copyright {
     span:last-child {
       font-weight: $bold;
-      color: $body-bgcolor;
+      color: $team-color; // used here
     }
   }
 
@@ -32,7 +31,7 @@
       display: inline-block;
 
       &:hover,
-      &:focus ,
+      &:focus,
       &:active {
         display: inline-block;
         animation-play-state: paused;
@@ -58,6 +57,7 @@
     grid-template-columns: 1fr 1fr;
     justify-content: space-around;
     grid-gap: 40px;
+    margin-bottom: 20rem;
 
     &-link {
       &:hover {
@@ -68,7 +68,7 @@
 }
 
 #color {
-  stroke: $body-bgcolor;
+  stroke: $team-color; // used here
   stroke-width: 3px;
   fill: none;
   display: inline-block;
