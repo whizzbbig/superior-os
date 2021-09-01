@@ -67,20 +67,3 @@ img {
 .cursor {
   display: none;
 }
-
-.js {
-  .content {
-    pointer-events: none;
-  }
-  .content__item {
-    height: 100%;
-    opacity: 0;
-    pointer-events: none;
-  }
-  .content__item--current {
-    pointer-events: auto;
-    opacity: 1;
-    top: 0;
-    display: grid;
-  }
-}
