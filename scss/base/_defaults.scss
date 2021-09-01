@@ -46,10 +46,14 @@ img {
 }
 
 .horizontal-scroll {
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-  left: 0;
+  overflow: auto;
+
+  @media (min-width: 1200px) {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    left: 0;
+  }
 }
 
 .pin-wrap {
