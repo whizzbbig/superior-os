@@ -2,28 +2,24 @@
 
 # Steps to Produce Error
 ```sh
-* Open the project in live server 
-* Go to very end of the page
-* you'll se a strip of images when you drag them they'll drag
-* tap on anyof the number of the images
-* you'll move to strip outer which is content
-* tap the down arrow buttons and open the devtools you made it to the error :)
-* the strip of images also never comes :)
+* Open this [link](https://only-mobile.netlify.app) in mobile 
 ```
 
 # File System
 ```sh
 |-js
-   |- scrollify.js // its the file contains js about that strip image effect
-
-|-scss
-  |- layout
-     |- _team.scss // its the file contains css about that strip effect
+   |- main.js // This is the file contains code of locomotive scroll from line 7 to 22
 ```
 
 ## Video
+### Desktop View
+
+https://user-images.githubusercontent.com/54703305/131676459-cac97dc0-66bc-41bb-95e5-a6809d5ea5d2.mov
+
+### Mobile View 
 
 
-https://user-images.githubusercontent.com/54703305/129496857-b4b01504-8e28-4f0d-9d29-a95bc28c855b.mov
+
+https://user-images.githubusercontent.com/54703305/131676819-50aa75c3-c202-4464-8a50-9562e26273ea.mp4
 
 
