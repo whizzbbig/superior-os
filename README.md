@@ -1,9 +1,9 @@
 # superior-os
 
 # Steps to Produce Error
-```sh
+
 * Open this [link](https://only-mobile.netlify.app) in mobile 
-```
+
 
 # File System
 ```sh
