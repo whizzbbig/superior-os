@@ -50,686 +50,692 @@
     </script>
   </head>
   <body>
-    <!-- <div class="loading">
+    <div class="loading">
       <div id="bm"></div>
-    </div> -->
-    <!-- <div class="content"> -->
-    <nav class="nav">
-      <a href="#home" class="link">
-        <span class="link-icon">
-          <!-- icon -->
-          <svg
-            width="23"
-            height="23"
-            viewBox="0 0 23 23"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M22 19.9258V11.8094C22.0001 11.2447 21.8834 10.686 21.6572 10.1674C21.4309 9.64881 21.0999 9.18131 20.6843 8.79351L12.9427 1.56697C12.5528 1.20287 12.0366 1 11.5 1C10.9634 1 10.4472 1.20287 10.0573 1.56697L2.31565 8.79351C1.90009 9.18131 1.56905 9.64881 1.34282 10.1674C1.1166 10.686 0.999939 11.2447 1 11.8094V19.9258C1 20.4759 1.22125 21.0035 1.61508 21.3925C2.0089 21.7815 2.54305 22 3.1 22H19.9C20.457 22 20.9911 21.7815 21.3849 21.3925C21.7787 21.0035 22 20.4759 22 19.9258Z"
-              stroke="white"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-          <!-- /icon -->
-        </span>
-        <span class="link-title">Home</span>
-      </a>
-      <a href="#features" class="link">
-        <span class="link-icon">
-          <!-- icon -->
-          <svg
-            width="31"
-            height="31"
-            viewBox="0 0 31 31"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M14.3039 3.40097C14.7173 2.3108 16.2815 2.3108 16.6961 3.40097L19.3698 10.8074C19.5571 11.2982 20.0338 11.625 20.5659 11.625H27.1366C28.3508 11.625 28.8804 13.1363 27.9258 13.8764L23.25 18.0833C23.0405 18.2444 22.8875 18.4676 22.8128 18.721C22.738 18.9744 22.7455 19.2449 22.8341 19.4938L24.5417 26.7311C24.9576 27.8936 23.6117 28.892 22.5938 28.1764L16.2427 24.1464C16.0252 23.9936 15.7658 23.9115 15.5 23.9115C15.2342 23.9115 14.9748 23.9936 14.7573 24.1464L8.40617 28.1764C7.38963 28.892 6.04242 27.8923 6.45833 26.7311L8.16592 19.4938C8.2545 19.2449 8.26196 18.9744 8.18724 18.721C8.11252 18.4676 7.95945 18.2444 7.75 18.0833L3.07417 13.8764C2.11833 13.1363 2.6505 11.625 3.86208 11.625H10.4328C10.6915 11.6259 10.9444 11.5482 11.158 11.4022C11.3715 11.2562 11.5358 11.0488 11.6289 10.8074L14.3026 3.40097H14.3039Z"
-              stroke="white"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-          <!-- /icon -->
-        </span>
-        <span class="link-title">Features</span>
-      </a>
-      <a href="#screenshots" class="link screenshots">
-        <span class="link-icon">
-          <!-- icon -->
-          <svg
-            width="22"
-            height="23"
-            viewBox="0 0 22 23"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M10.9914 13.8082L9.09456 15.6869C9.70183 16.7004 9.91505 17.8985 9.69423 19.0565C9.47341 20.2146 8.83372 21.2531 7.89507 21.9775C6.95642 22.7018 5.78325 23.0622 4.59548 22.9912C3.40771 22.9201 2.28687 22.4225 1.44308 21.5915C0.599292 20.7605 0.0904742 19.6532 0.0120077 18.4773C-0.0664587 17.3013 0.290813 16.1374 1.01685 15.2036C1.74289 14.2699 2.78785 13.6305 3.95586 13.4052C5.12386 13.18 6.33471 13.3844 7.36144 13.9801L9.262 12.0965L5.44378 8.31373C5.10008 7.97322 4.907 7.51146 4.907 7.02999C4.907 6.54852 5.10008 6.08676 5.44378 5.74625L5.87644 5.31774L10.9914 10.3837L16.1113 5.31289L16.5428 5.74141C16.8861 6.08187 17.0789 6.54337 17.0789 7.02454C17.0789 7.50572 16.8861 7.96722 16.5428 8.30768L12.7197 12.0965L14.6276 13.9849C15.6526 13.3863 16.8628 13.1786 18.0315 13.4005C19.2001 13.6225 20.2469 14.259 20.9756 15.1907C21.7043 16.1224 22.0649 17.2853 21.9898 18.4615C21.9147 19.6377 21.4091 20.7464 20.5676 21.5797C19.7262 22.4131 18.6068 22.9139 17.4192 22.9882C16.2317 23.0626 15.0575 22.7055 14.1168 21.9838C13.1761 21.2621 12.5334 20.2253 12.3093 19.0679C12.0852 17.9104 12.295 16.7118 12.8993 15.6966L10.9914 13.8082V13.8082ZM19.5556 12.105V2.421H2.44444V12.105H0V1.2105C0 0.889457 0.128769 0.581561 0.357981 0.354548C0.587192 0.127535 0.898069 0 1.22222 0H20.7778C21.1019 0 21.4128 0.127535 21.642 0.354548C21.8712 0.581561 22 0.889457 22 1.2105V12.105H19.5556ZM4.88889 20.5785C5.5372 20.5785 6.15895 20.3235 6.61737 19.8694C7.07579 19.4154 7.33333 18.7996 7.33333 18.1575C7.33333 17.5154 7.07579 16.8997 6.61737 16.4456C6.15895 15.9916 5.5372 15.7365 4.88889 15.7365C4.24058 15.7365 3.61883 15.9916 3.16041 16.4456C2.70198 16.8997 2.44444 17.5154 2.44444 18.1575C2.44444 18.7996 2.70198 19.4154 3.16041 19.8694C3.61883 20.3235 4.24058 20.5785 4.88889 20.5785V20.5785ZM17.1111 20.5785C17.7594 20.5785 18.3812 20.3235 18.8396 19.8694C19.298 19.4154 19.5556 18.7996 19.5556 18.1575C19.5556 17.5154 19.298 16.8997 18.8396 16.4456C18.3812 15.9916 17.7594 15.7365 17.1111 15.7365C16.4628 15.7365 15.8411 15.9916 15.3826 16.4456C14.9242 16.8997 14.6667 17.5154 14.6667 18.1575C14.6667 18.7996 14.9242 19.4154 15.3826 19.8694C15.8411 20.3235 16.4628 20.5785 17.1111 20.5785V20.5785Z"
-              fill="white"
-            />
-          </svg>
-          <!-- /icon -->
-        </span>
-        <span class="link-title">Screenshots</span>
-      </a>
-      <a href="#team" class="link">
-        <span class="link-icon">
-          <!-- icon -->
-          <svg
-            width="25"
-            height="21"
-            viewBox="0 0 25 21"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M8.75412 3.49675C8.75412 2.56935 9.12253 1.67994 9.77829 1.02417C10.4341 0.368406 11.3235 0 12.2509 0C13.1783 0 14.0677 0.368406 14.7234 1.02417C15.3792 1.67994 15.7476 2.56935 15.7476 3.49675C15.7476 4.42415 15.3792 5.31356 14.7234 5.96933C14.0677 6.62509 13.1783 6.9935 12.2509 6.9935C11.3235 6.9935 10.4341 6.62509 9.77829 5.96933C9.12253 5.31356 8.75412 4.42415 8.75412 3.49675ZM12.2509 1.75013C12.0215 1.75013 11.7944 1.7953 11.5825 1.88308C11.3706 1.97085 11.178 2.09951 11.0158 2.2617C10.8536 2.42389 10.725 2.61644 10.6372 2.82835C10.5494 3.04026 10.5042 3.26738 10.5042 3.49675C10.5042 3.72612 10.5494 3.95324 10.6372 4.16515C10.725 4.37706 10.8536 4.56961 11.0158 4.7318C11.178 4.89399 11.3706 5.02264 11.5825 5.11042C11.7944 5.1982 12.0215 5.24337 12.2509 5.24337C12.7141 5.24337 13.1584 5.05936 13.4859 4.7318C13.8135 4.40424 13.9975 3.95998 13.9975 3.49675C13.9975 3.03352 13.8135 2.58926 13.4859 2.2617C13.1584 1.93414 12.7141 1.75013 12.2509 1.75013Z"
-              fill="white"
-            />
-            <path
-              d="M17.5013 4.3718C17.5013 4.02706 17.5692 3.68569 17.7011 3.36718C17.833 3.04868 18.0264 2.75928 18.2702 2.51551C18.5139 2.27174 18.8033 2.07837 19.1218 1.94644C19.4403 1.81451 19.7817 1.74661 20.1264 1.74661C20.4712 1.74661 20.8126 1.81451 21.1311 1.94644C21.4496 2.07837 21.739 2.27174 21.9827 2.51551C22.2265 2.75928 22.4199 3.04868 22.5518 3.36718C22.6837 3.68569 22.7516 4.02706 22.7516 4.3718C22.7516 5.06804 22.475 5.73577 21.9827 6.22809C21.4904 6.72041 20.8227 6.99699 20.1264 6.99699C19.4302 6.99699 18.7625 6.72041 18.2702 6.22809C17.7778 5.73577 17.5013 5.06804 17.5013 4.3718ZM20.1264 3.49674C19.8944 3.49674 19.6718 3.58893 19.5077 3.75304C19.3436 3.91714 19.2514 4.13972 19.2514 4.3718C19.2514 4.60388 19.3436 4.82646 19.5077 4.99056C19.6718 5.15467 19.8944 5.24686 20.1264 5.24686C20.3585 5.24686 20.5811 5.15467 20.7452 4.99056C20.9093 4.82646 21.0015 4.60388 21.0015 4.3718C21.0015 4.13972 20.9093 3.91714 20.7452 3.75304C20.5811 3.58893 20.3585 3.49674 20.1264 3.49674Z"
-              fill="white"
-            />
-            <path
-              d="M4.37531 1.74661C3.67907 1.74661 3.01134 2.02319 2.51902 2.51551C2.0267 3.00783 1.75012 3.67556 1.75012 4.3718C1.75012 5.06804 2.0267 5.73577 2.51902 6.22809C3.01134 6.72041 3.67907 6.99699 4.37531 6.99699C5.07155 6.99699 5.73928 6.72041 6.2316 6.22809C6.72392 5.73577 7.0005 5.06804 7.0005 4.3718C7.0005 3.67556 6.72392 3.00783 6.2316 2.51551C5.73928 2.02319 5.07155 1.74661 4.37531 1.74661ZM3.50025 4.3718C3.50025 4.13972 3.59244 3.91714 3.75655 3.75304C3.92065 3.58893 4.14323 3.49674 4.37531 3.49674C4.60739 3.49674 4.82997 3.58893 4.99407 3.75304C5.15818 3.91714 5.25037 4.13972 5.25037 4.3718C5.25037 4.60388 5.15818 4.82646 4.99407 4.99056C4.82997 5.15467 4.60739 5.24686 4.37531 5.24686C4.14323 5.24686 3.92065 5.15467 3.75655 4.99056C3.59244 4.82646 3.50025 4.60388 3.50025 4.3718Z"
-              fill="white"
-            />
-            <path
-              d="M5.71941 8.7471C5.4114 9.27888 5.24957 9.88269 5.25038 10.4972H1.75013V14.8725C1.74998 15.3079 1.8581 15.7364 2.06474 16.1195C2.27138 16.5027 2.57006 16.8284 2.93389 17.0675C3.29772 17.3065 3.71528 17.4513 4.14898 17.4888C4.58268 17.5263 5.0189 17.4554 5.41839 17.2825C5.5479 17.8618 5.75091 18.4148 6.01343 18.9311C5.3492 19.1993 4.62927 19.3003 3.91688 19.2252C3.20449 19.1502 2.52142 18.9013 1.92766 18.5006C1.3339 18.0999 0.84762 17.5595 0.511514 16.9269C0.175408 16.2943 -0.000238101 15.5889 2.4224e-07 14.8725V10.4972C2.4224e-07 10.0331 0.184388 9.58791 0.5126 9.2597C0.840812 8.93149 1.28596 8.7471 1.75013 8.7471H5.71941Z"
-              fill="white"
-            />
-            <path
-              d="M18.4883 18.9311C19.1525 19.1993 19.8725 19.3003 20.5849 19.2252C21.2973 19.1502 21.9803 18.9013 22.5741 18.5006C23.1678 18.0999 23.6541 17.5595 23.9902 16.9269C24.3263 16.2943 24.502 15.5889 24.5017 14.8725V10.4972C24.5017 10.0331 24.3174 9.58791 23.9891 9.2597C23.6609 8.93149 23.2158 8.7471 22.7516 8.7471H18.7823C19.0799 9.26164 19.2514 9.85843 19.2514 10.4972H22.7516V14.8725C22.7518 15.3079 22.6436 15.7364 22.437 16.1195C22.2304 16.5027 21.9317 16.8284 21.5679 17.0675C21.204 17.3065 20.7865 17.4513 20.3528 17.4888C19.9191 17.5263 19.4828 17.4554 19.0834 17.2825C18.9521 17.8618 18.7508 18.4148 18.4883 18.9311Z"
-              fill="white"
-            />
-            <path
-              d="M8.75063 8.7471C8.28647 8.7471 7.84132 8.93149 7.5131 9.2597C7.18489 9.58791 7.0005 10.0331 7.0005 10.4972V15.7476C7.0005 17.1401 7.55367 18.4755 8.5383 19.4602C9.52294 20.4448 10.8584 20.998 12.2509 20.998C13.6434 20.998 14.9788 20.4448 15.9635 19.4602C16.9481 18.4755 17.5013 17.1401 17.5013 15.7476V10.4972C17.5013 10.0331 17.3169 9.58791 16.9887 9.2597C16.6604 8.93149 16.2153 8.7471 15.7511 8.7471H8.75063ZM8.75063 10.4972H15.7511V15.7476C15.7511 16.6759 15.3824 17.5662 14.7259 18.2227C14.0695 18.8791 13.1792 19.2479 12.2509 19.2479C11.3226 19.2479 10.4323 18.8791 9.77583 18.2227C9.1194 17.5662 8.75063 16.6759 8.75063 15.7476V10.4972Z"
-              fill="white"
-            />
-          </svg>
-          <!-- /icon -->
-        </span>
-        <span class="link-title">Team</span>
-      </a>
-      <!-- /icon -->
-    </nav>
-    <div class="container">
-      <!-- H O M E  SECTION -->
-      <header
-        id="home"
-        data-bgcolor="#080705"
-        data-textcolor="#F5F5F5"
-        class="header"
-      >
-        <h1 class="header__heading">
-          <span
-            data-scroll
-            data-scroll-direction="horizontal"
-            data-scroll-speed="-1"
-            class="header__heading-span"
-            >Superior</span
-          >
-          <span
-            data-scroll
-            data-scroll-direction="horizontal"
-            data-scroll-speed="-2"
-            class="header__heading-span"
-            >Os</span
-          >
-        </h1>
-        <!-- 
-          <div id="mockup-container">
-            <canvas id="canvas3d"></canvas>
-          </div> -->
-        <div class="header__mobile-view">
-          <div class="caption-container">
-            <div
-              data-scroll
-              data-scroll-direction="horizontal"
-              data-scroll-speed="5"
-              class="caption"
-            >
-              <h2 class="caption__heading uphold">
-                Stable Stable Stable Stable Stable Stable Stable Stable Stable
-                Stable Stable Stable Stable Stable Stable Stable Stable Stable
-              </h2>
-            </div>
-            <div
-              data-scroll
-              data-scroll-direction="horizontal"
-              data-scroll-speed="-5"
-              class="caption"
-            >
-              <h2 class="caption__heading reverse">
-                Secure Secure Secure Secure Secure Secure Secure Secure Secure
-                Secure Secure Secure Secure Secure Secure Secure Secure Secure
-              </h2>
-            </div>
-            <div
-              data-scroll
-              data-scroll-direction="horizontal"
-              data-scroll-speed="5"
-              class="caption"
-            >
-              <h2 class="caption__heading uphold">
-                Highly Customizable Highly Customizable Highly Customizable
-                Highly Customizable Highly Customizable Highly Customizable
-                Highly Customizable
-              </h2>
-            </div>
-          </div>
-          <img
-            class="header__mobile-view__img"
-            src="./img/lockscreen.png"
-            alt="lockscreen"
-          />
-          <a href="#" class="btn-download btn">
+    </div>
+    <div class="content">
+      <nav class="nav">
+        <a href="#home" class="link">
+          <span class="link-icon">
+            <!-- icon -->
             <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="29"
-              height="29"
-              viewBox="0 0 29 29"
+              width="23"
+              height="23"
+              viewBox="0 0 23 23"
               fill="none"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M24.9722 24.9722H4.02778C3.81414 24.9722 3.60924 25.0571 3.45817 25.2082C3.3071 25.3592 3.22223 25.5641 3.22223 25.7778C3.22223 25.9914 3.3071 26.1963 3.45817 26.3474C3.60924 26.4985 3.81414 26.5833 4.02778 26.5833H24.9722C25.1859 26.5833 25.3908 26.4985 25.5418 26.3474C25.6929 26.1963 25.7778 25.9914 25.7778 25.7778C25.7778 25.5641 25.6929 25.3592 25.5418 25.2082C25.3908 25.0571 25.1859 24.9722 24.9722 24.9722Z"
-                fill="black"
-              />
-              <path
-                d="M14.5 23.7478L23.0469 15.2008C23.1789 15.0467 23.2479 14.8485 23.24 14.6458C23.2322 14.443 23.1482 14.2507 23.0047 14.1072C22.8612 13.9638 22.6689 13.8797 22.4662 13.8719C22.2634 13.8641 22.0652 13.933 21.9111 14.065L15.3056 20.6625V4.02778C15.3056 3.81414 15.2207 3.60924 15.0696 3.45817C14.9185 3.3071 14.7136 3.22223 14.5 3.22223C14.2864 3.22223 14.0815 3.3071 13.9304 3.45817C13.7793 3.60924 13.6944 3.81414 13.6944 4.02778V20.6625L7.09695 14.065C7.02473 13.9807 6.93586 13.9122 6.83592 13.8638C6.73598 13.8155 6.62712 13.7883 6.51618 13.784C6.40524 13.7797 6.29461 13.7984 6.19124 13.8389C6.08787 13.8794 5.99398 13.9409 5.91548 14.0194C5.83697 14.0979 5.77554 14.1918 5.73504 14.2951C5.69454 14.3985 5.67585 14.5091 5.68014 14.6201C5.68442 14.731 5.71159 14.8399 5.75994 14.9398C5.8083 15.0398 5.87679 15.1286 5.96111 15.2008L14.5 23.7478Z"
-                fill="black"
+                d="M22 19.9258V11.8094C22.0001 11.2447 21.8834 10.686 21.6572 10.1674C21.4309 9.64881 21.0999 9.18131 20.6843 8.79351L12.9427 1.56697C12.5528 1.20287 12.0366 1 11.5 1C10.9634 1 10.4472 1.20287 10.0573 1.56697L2.31565 8.79351C1.90009 9.18131 1.56905 9.64881 1.34282 10.1674C1.1166 10.686 0.999939 11.2447 1 11.8094V19.9258C1 20.4759 1.22125 21.0035 1.61508 21.3925C2.0089 21.7815 2.54305 22 3.1 22H19.9C20.457 22 20.9911 21.7815 21.3849 21.3925C21.7787 21.0035 22 20.4759 22 19.9258Z"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
               />
             </svg>
-          </a>
-        </div>
-        <!-- <div
+            <!-- /icon -->
+          </span>
+          <span class="link-title">Home</span>
+        </a>
+        <a href="#features" class="link">
+          <span class="link-icon">
+            <!-- icon -->
+            <svg
+              width="31"
+              height="31"
+              viewBox="0 0 31 31"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M14.3039 3.40097C14.7173 2.3108 16.2815 2.3108 16.6961 3.40097L19.3698 10.8074C19.5571 11.2982 20.0338 11.625 20.5659 11.625H27.1366C28.3508 11.625 28.8804 13.1363 27.9258 13.8764L23.25 18.0833C23.0405 18.2444 22.8875 18.4676 22.8128 18.721C22.738 18.9744 22.7455 19.2449 22.8341 19.4938L24.5417 26.7311C24.9576 27.8936 23.6117 28.892 22.5938 28.1764L16.2427 24.1464C16.0252 23.9936 15.7658 23.9115 15.5 23.9115C15.2342 23.9115 14.9748 23.9936 14.7573 24.1464L8.40617 28.1764C7.38963 28.892 6.04242 27.8923 6.45833 26.7311L8.16592 19.4938C8.2545 19.2449 8.26196 18.9744 8.18724 18.721C8.11252 18.4676 7.95945 18.2444 7.75 18.0833L3.07417 13.8764C2.11833 13.1363 2.6505 11.625 3.86208 11.625H10.4328C10.6915 11.6259 10.9444 11.5482 11.158 11.4022C11.3715 11.2562 11.5358 11.0488 11.6289 10.8074L14.3026 3.40097H14.3039Z"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <!-- /icon -->
+          </span>
+          <span class="link-title">Features</span>
+        </a>
+        <a href="#screenshots" class="link screenshots">
+          <span class="link-icon">
+            <!-- icon -->
+            <svg
+              width="22"
+              height="23"
+              viewBox="0 0 22 23"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10.9914 13.8082L9.09456 15.6869C9.70183 16.7004 9.91505 17.8985 9.69423 19.0565C9.47341 20.2146 8.83372 21.2531 7.89507 21.9775C6.95642 22.7018 5.78325 23.0622 4.59548 22.9912C3.40771 22.9201 2.28687 22.4225 1.44308 21.5915C0.599292 20.7605 0.0904742 19.6532 0.0120077 18.4773C-0.0664587 17.3013 0.290813 16.1374 1.01685 15.2036C1.74289 14.2699 2.78785 13.6305 3.95586 13.4052C5.12386 13.18 6.33471 13.3844 7.36144 13.9801L9.262 12.0965L5.44378 8.31373C5.10008 7.97322 4.907 7.51146 4.907 7.02999C4.907 6.54852 5.10008 6.08676 5.44378 5.74625L5.87644 5.31774L10.9914 10.3837L16.1113 5.31289L16.5428 5.74141C16.8861 6.08187 17.0789 6.54337 17.0789 7.02454C17.0789 7.50572 16.8861 7.96722 16.5428 8.30768L12.7197 12.0965L14.6276 13.9849C15.6526 13.3863 16.8628 13.1786 18.0315 13.4005C19.2001 13.6225 20.2469 14.259 20.9756 15.1907C21.7043 16.1224 22.0649 17.2853 21.9898 18.4615C21.9147 19.6377 21.4091 20.7464 20.5676 21.5797C19.7262 22.4131 18.6068 22.9139 17.4192 22.9882C16.2317 23.0626 15.0575 22.7055 14.1168 21.9838C13.1761 21.2621 12.5334 20.2253 12.3093 19.0679C12.0852 17.9104 12.295 16.7118 12.8993 15.6966L10.9914 13.8082V13.8082ZM19.5556 12.105V2.421H2.44444V12.105H0V1.2105C0 0.889457 0.128769 0.581561 0.357981 0.354548C0.587192 0.127535 0.898069 0 1.22222 0H20.7778C21.1019 0 21.4128 0.127535 21.642 0.354548C21.8712 0.581561 22 0.889457 22 1.2105V12.105H19.5556ZM4.88889 20.5785C5.5372 20.5785 6.15895 20.3235 6.61737 19.8694C7.07579 19.4154 7.33333 18.7996 7.33333 18.1575C7.33333 17.5154 7.07579 16.8997 6.61737 16.4456C6.15895 15.9916 5.5372 15.7365 4.88889 15.7365C4.24058 15.7365 3.61883 15.9916 3.16041 16.4456C2.70198 16.8997 2.44444 17.5154 2.44444 18.1575C2.44444 18.7996 2.70198 19.4154 3.16041 19.8694C3.61883 20.3235 4.24058 20.5785 4.88889 20.5785V20.5785ZM17.1111 20.5785C17.7594 20.5785 18.3812 20.3235 18.8396 19.8694C19.298 19.4154 19.5556 18.7996 19.5556 18.1575C19.5556 17.5154 19.298 16.8997 18.8396 16.4456C18.3812 15.9916 17.7594 15.7365 17.1111 15.7365C16.4628 15.7365 15.8411 15.9916 15.3826 16.4456C14.9242 16.8997 14.6667 17.5154 14.6667 18.1575C14.6667 18.7996 14.9242 19.4154 15.3826 19.8694C15.8411 20.3235 16.4628 20.5785 17.1111 20.5785V20.5785Z"
+                fill="white"
+              />
+            </svg>
+            <!-- /icon -->
+          </span>
+          <span class="link-title">Screenshots</span>
+        </a>
+        <a href="#team" class="link">
+          <span class="link-icon">
+            <!-- icon -->
+            <svg
+              width="25"
+              height="21"
+              viewBox="0 0 25 21"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8.75412 3.49675C8.75412 2.56935 9.12253 1.67994 9.77829 1.02417C10.4341 0.368406 11.3235 0 12.2509 0C13.1783 0 14.0677 0.368406 14.7234 1.02417C15.3792 1.67994 15.7476 2.56935 15.7476 3.49675C15.7476 4.42415 15.3792 5.31356 14.7234 5.96933C14.0677 6.62509 13.1783 6.9935 12.2509 6.9935C11.3235 6.9935 10.4341 6.62509 9.77829 5.96933C9.12253 5.31356 8.75412 4.42415 8.75412 3.49675ZM12.2509 1.75013C12.0215 1.75013 11.7944 1.7953 11.5825 1.88308C11.3706 1.97085 11.178 2.09951 11.0158 2.2617C10.8536 2.42389 10.725 2.61644 10.6372 2.82835C10.5494 3.04026 10.5042 3.26738 10.5042 3.49675C10.5042 3.72612 10.5494 3.95324 10.6372 4.16515C10.725 4.37706 10.8536 4.56961 11.0158 4.7318C11.178 4.89399 11.3706 5.02264 11.5825 5.11042C11.7944 5.1982 12.0215 5.24337 12.2509 5.24337C12.7141 5.24337 13.1584 5.05936 13.4859 4.7318C13.8135 4.40424 13.9975 3.95998 13.9975 3.49675C13.9975 3.03352 13.8135 2.58926 13.4859 2.2617C13.1584 1.93414 12.7141 1.75013 12.2509 1.75013Z"
+                fill="white"
+              />
+              <path
+                d="M17.5013 4.3718C17.5013 4.02706 17.5692 3.68569 17.7011 3.36718C17.833 3.04868 18.0264 2.75928 18.2702 2.51551C18.5139 2.27174 18.8033 2.07837 19.1218 1.94644C19.4403 1.81451 19.7817 1.74661 20.1264 1.74661C20.4712 1.74661 20.8126 1.81451 21.1311 1.94644C21.4496 2.07837 21.739 2.27174 21.9827 2.51551C22.2265 2.75928 22.4199 3.04868 22.5518 3.36718C22.6837 3.68569 22.7516 4.02706 22.7516 4.3718C22.7516 5.06804 22.475 5.73577 21.9827 6.22809C21.4904 6.72041 20.8227 6.99699 20.1264 6.99699C19.4302 6.99699 18.7625 6.72041 18.2702 6.22809C17.7778 5.73577 17.5013 5.06804 17.5013 4.3718ZM20.1264 3.49674C19.8944 3.49674 19.6718 3.58893 19.5077 3.75304C19.3436 3.91714 19.2514 4.13972 19.2514 4.3718C19.2514 4.60388 19.3436 4.82646 19.5077 4.99056C19.6718 5.15467 19.8944 5.24686 20.1264 5.24686C20.3585 5.24686 20.5811 5.15467 20.7452 4.99056C20.9093 4.82646 21.0015 4.60388 21.0015 4.3718C21.0015 4.13972 20.9093 3.91714 20.7452 3.75304C20.5811 3.58893 20.3585 3.49674 20.1264 3.49674Z"
+                fill="white"
+              />
+              <path
+                d="M4.37531 1.74661C3.67907 1.74661 3.01134 2.02319 2.51902 2.51551C2.0267 3.00783 1.75012 3.67556 1.75012 4.3718C1.75012 5.06804 2.0267 5.73577 2.51902 6.22809C3.01134 6.72041 3.67907 6.99699 4.37531 6.99699C5.07155 6.99699 5.73928 6.72041 6.2316 6.22809C6.72392 5.73577 7.0005 5.06804 7.0005 4.3718C7.0005 3.67556 6.72392 3.00783 6.2316 2.51551C5.73928 2.02319 5.07155 1.74661 4.37531 1.74661ZM3.50025 4.3718C3.50025 4.13972 3.59244 3.91714 3.75655 3.75304C3.92065 3.58893 4.14323 3.49674 4.37531 3.49674C4.60739 3.49674 4.82997 3.58893 4.99407 3.75304C5.15818 3.91714 5.25037 4.13972 5.25037 4.3718C5.25037 4.60388 5.15818 4.82646 4.99407 4.99056C4.82997 5.15467 4.60739 5.24686 4.37531 5.24686C4.14323 5.24686 3.92065 5.15467 3.75655 4.99056C3.59244 4.82646 3.50025 4.60388 3.50025 4.3718Z"
+                fill="white"
+              />
+              <path
+                d="M5.71941 8.7471C5.4114 9.27888 5.24957 9.88269 5.25038 10.4972H1.75013V14.8725C1.74998 15.3079 1.8581 15.7364 2.06474 16.1195C2.27138 16.5027 2.57006 16.8284 2.93389 17.0675C3.29772 17.3065 3.71528 17.4513 4.14898 17.4888C4.58268 17.5263 5.0189 17.4554 5.41839 17.2825C5.5479 17.8618 5.75091 18.4148 6.01343 18.9311C5.3492 19.1993 4.62927 19.3003 3.91688 19.2252C3.20449 19.1502 2.52142 18.9013 1.92766 18.5006C1.3339 18.0999 0.84762 17.5595 0.511514 16.9269C0.175408 16.2943 -0.000238101 15.5889 2.4224e-07 14.8725V10.4972C2.4224e-07 10.0331 0.184388 9.58791 0.5126 9.2597C0.840812 8.93149 1.28596 8.7471 1.75013 8.7471H5.71941Z"
+                fill="white"
+              />
+              <path
+                d="M18.4883 18.9311C19.1525 19.1993 19.8725 19.3003 20.5849 19.2252C21.2973 19.1502 21.9803 18.9013 22.5741 18.5006C23.1678 18.0999 23.6541 17.5595 23.9902 16.9269C24.3263 16.2943 24.502 15.5889 24.5017 14.8725V10.4972C24.5017 10.0331 24.3174 9.58791 23.9891 9.2597C23.6609 8.93149 23.2158 8.7471 22.7516 8.7471H18.7823C19.0799 9.26164 19.2514 9.85843 19.2514 10.4972H22.7516V14.8725C22.7518 15.3079 22.6436 15.7364 22.437 16.1195C22.2304 16.5027 21.9317 16.8284 21.5679 17.0675C21.204 17.3065 20.7865 17.4513 20.3528 17.4888C19.9191 17.5263 19.4828 17.4554 19.0834 17.2825C18.9521 17.8618 18.7508 18.4148 18.4883 18.9311Z"
+                fill="white"
+              />
+              <path
+                d="M8.75063 8.7471C8.28647 8.7471 7.84132 8.93149 7.5131 9.2597C7.18489 9.58791 7.0005 10.0331 7.0005 10.4972V15.7476C7.0005 17.1401 7.55367 18.4755 8.5383 19.4602C9.52294 20.4448 10.8584 20.998 12.2509 20.998C13.6434 20.998 14.9788 20.4448 15.9635 19.4602C16.9481 18.4755 17.5013 17.1401 17.5013 15.7476V10.4972C17.5013 10.0331 17.3169 9.58791 16.9887 9.2597C16.6604 8.93149 16.2153 8.7471 15.7511 8.7471H8.75063ZM8.75063 10.4972H15.7511V15.7476C15.7511 16.6759 15.3824 17.5662 14.7259 18.2227C14.0695 18.8791 13.1792 19.2479 12.2509 19.2479C11.3226 19.2479 10.4323 18.8791 9.77583 18.2227C9.1194 17.5662 8.75063 16.6759 8.75063 15.7476V10.4972Z"
+                fill="white"
+              />
+            </svg>
+            <!-- /icon -->
+          </span>
+          <span class="link-title">Team</span>
+        </a>
+        <!-- /icon -->
+      </nav>
+      <div class="container">
+        <!-- H O M E  SECTION -->
+        <header
+          id="home"
+          data-bgcolor="#080705"
+          data-textcolor="#F5F5F5"
+          class="header"
+        >
+          <h1 class="header__heading">
+            <span
+              data-scroll
+              data-scroll-direction="horizontal"
+              data-scroll-speed="-1"
+              class="header__heading-span"
+              >Superior</span
+            >
+            <span
+              data-scroll
+              data-scroll-direction="horizontal"
+              data-scroll-speed="-2"
+              class="header__heading-span"
+              >Os</span
+            >
+          </h1>
+
+          <div id="mockup-container">
+            <canvas id="canvas3d"></canvas>
+          </div>
+          <div class="header__mobile-view">
+            <div class="caption-container">
+              <div
+                data-scroll
+                data-scroll-direction="horizontal"
+                data-scroll-speed="5"
+                class="caption"
+              >
+                <h2 class="caption__heading uphold">
+                  Stable Stable Stable Stable Stable Stable Stable Stable Stable
+                  Stable Stable Stable Stable Stable Stable Stable Stable Stable
+                </h2>
+              </div>
+              <div
+                data-scroll
+                data-scroll-direction="horizontal"
+                data-scroll-speed="-5"
+                class="caption"
+              >
+                <h2 class="caption__heading reverse">
+                  Secure Secure Secure Secure Secure Secure Secure Secure Secure
+                  Secure Secure Secure Secure Secure Secure Secure Secure Secure
+                </h2>
+              </div>
+              <div
+                data-scroll
+                data-scroll-direction="horizontal"
+                data-scroll-speed="5"
+                class="caption"
+              >
+                <h2 class="caption__heading uphold">
+                  Highly Customizable Highly Customizable Highly Customizable
+                  Highly Customizable Highly Customizable Highly Customizable
+                  Highly Customizable
+                </h2>
+              </div>
+            </div>
+            <img
+              class="header__mobile-view__img"
+              src="./img/lockscreen.png"
+              alt="lockscreen"
+            />
+            <a href="#" class="btn-download btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="29"
+                height="29"
+                viewBox="0 0 29 29"
+                fill="none"
+              >
+                <path
+                  d="M24.9722 24.9722H4.02778C3.81414 24.9722 3.60924 25.0571 3.45817 25.2082C3.3071 25.3592 3.22223 25.5641 3.22223 25.7778C3.22223 25.9914 3.3071 26.1963 3.45817 26.3474C3.60924 26.4985 3.81414 26.5833 4.02778 26.5833H24.9722C25.1859 26.5833 25.3908 26.4985 25.5418 26.3474C25.6929 26.1963 25.7778 25.9914 25.7778 25.7778C25.7778 25.5641 25.6929 25.3592 25.5418 25.2082C25.3908 25.0571 25.1859 24.9722 24.9722 24.9722Z"
+                  fill="black"
+                />
+                <path
+                  d="M14.5 23.7478L23.0469 15.2008C23.1789 15.0467 23.2479 14.8485 23.24 14.6458C23.2322 14.443 23.1482 14.2507 23.0047 14.1072C22.8612 13.9638 22.6689 13.8797 22.4662 13.8719C22.2634 13.8641 22.0652 13.933 21.9111 14.065L15.3056 20.6625V4.02778C15.3056 3.81414 15.2207 3.60924 15.0696 3.45817C14.9185 3.3071 14.7136 3.22223 14.5 3.22223C14.2864 3.22223 14.0815 3.3071 13.9304 3.45817C13.7793 3.60924 13.6944 3.81414 13.6944 4.02778V20.6625L7.09695 14.065C7.02473 13.9807 6.93586 13.9122 6.83592 13.8638C6.73598 13.8155 6.62712 13.7883 6.51618 13.784C6.40524 13.7797 6.29461 13.7984 6.19124 13.8389C6.08787 13.8794 5.99398 13.9409 5.91548 14.0194C5.83697 14.0979 5.77554 14.1918 5.73504 14.2951C5.69454 14.3985 5.67585 14.5091 5.68014 14.6201C5.68442 14.731 5.71159 14.8399 5.75994 14.9398C5.8083 15.0398 5.87679 15.1286 5.96111 15.2008L14.5 23.7478Z"
+                  fill="black"
+                />
+              </svg>
+            </a>
+          </div>
+          <!-- <div
             class="in-progress"
             style="font-size: 5rem; font-weight: 900; text-align: center"
           >
             IN Progress...
           </div> -->
-      </header>
-      <!-- F E A T U R E S  SECTION -->
-      <section
-        id="features"
-        data-bgcolor="#ea34a6"
-        data-textcolor="#F5F5F5"
-        class="features"
-      >
-        <!-- <div class="pin-wrap"> -->
-        <h1 data-scroll-target=".features" class="features__heading">
-          Features
-        </h1>
-        <div class="features__homescreen">
-          <h2 class="features__homescreen-heading">Homescreen</h2>
-          <img
-            src="./img/home.png"
-            alt="homescreen of superior rom"
-            class="features__homescreen-img"
-          />
-          <p>
-            We want to make you feel homescreen as yours, hence we have added
-            features which makes home screen customizable as per your likes.
-          </p>
-        </div>
-        <div class="features__superiorsettings">
-          <h2 class="features__superiorsettings-heading">Superior Settings</h2>
-          <img
-            src="./img/superiorSettings.png"
-            alt="additional settings from superior os rom"
-            class="features__superiorsettings-img"
-          />
-          <p>
-            We have carefully hand-picked features which helps you in your dialy
-            chores. Customize your device as you like.
-          </p>
-        </div>
-        <div class="features__updater">
-          <h2 class="features__superiorsettings-heading">Updater</h2>
-          <img
-            src="./img/version.png"
-            alt="updater panel of superior os rom"
-            class="features__updater-img"
-          />
-          <p>
-            We regularly update all our officially supported devices to make
-            sure your device stays upto-date. We have redesigned our updater to
-            make sure updating doesnt feel overwhelming.
-          </p>
-          <!-- </div> -->
-        </div>
-      </section>
-      <!-- S C R E E N S H O T S  SECTION -->
-      <main
-        id="screenshots"
-        data-bgcolor="#000"
-        data-textcolor="#f5f5f5"
-        class="grid-item main"
-      >
-        <h1 class="heading">Screenshots</h1>
-        <div class="items">
-          <div class="item item1">
+        </header>
+        <!-- F E A T U R E S  SECTION -->
+        <section
+          id="features"
+          data-bgcolor="#ea34a6"
+          data-textcolor="#F5F5F5"
+          class="features"
+        >
+          <!-- <div class="pin-wrap"> -->
+          <h1 data-scroll-target=".features" class="features__heading">
+            Features
+          </h1>
+          <div class="features__homescreen">
+            <h2 class="features__homescreen-heading">Homescreen</h2>
             <img
-              class="screeenshots__img"
-              src="./img/androidVersion.png"
-              alt=""
+              src="./img/home.png"
+              alt="homescreen of superior rom"
+              class="features__homescreen-img"
             />
+            <p>
+              We want to make you feel homescreen as yours, hence we have added
+              features which makes home screen customizable as per your likes.
+            </p>
           </div>
-          <div class="item item2">
-            <img class="screeenshots__img" src="./img/home.png" alt="" />
-          </div>
-          <div class="item item3">
-            <img class="screeenshots__img" src="./img/lockscreen.png" alt="" />
-          </div>
-          <div class="item item4">
-            <img class="screeenshots__img" src="./img/qs.png" alt="" />
-          </div>
-          <div class="item item5">
-            <img class="screeenshots__img" src="./img/settings.png" alt="" />
-          </div>
-          <div class="item item6">
+          <div class="features__superiorsettings">
+            <h2 class="features__superiorsettings-heading">
+              Superior Settings
+            </h2>
             <img
-              class="screeenshots__img"
               src="./img/superiorSettings.png"
-              alt=""
+              alt="additional settings from superior os rom"
+              class="features__superiorsettings-img"
             />
+            <p>
+              We have carefully hand-picked features which helps you in your
+              dialy chores. Customize your device as you like.
+            </p>
           </div>
-          <div class="item item7">
-            <img class="screeenshots__img" src="./img/version.png" alt="" />
+          <div class="features__updater">
+            <h2 class="features__superiorsettings-heading">Updater</h2>
+            <img
+              src="./img/version.png"
+              alt="updater panel of superior os rom"
+              class="features__updater-img"
+            />
+            <p>
+              We regularly update all our officially supported devices to make
+              sure your device stays upto-date. We have redesigned our updater
+              to make sure updating doesnt feel overwhelming.
+            </p>
+            <!-- </div> -->
           </div>
-        </div>
-      </main>
-      <!-- T E A M  SECTION -->
-      <main data-bgcolor="#000" data-textcolor="#f5f5f5" id="team">
-        <div class="frame">
-          <h3 class="frame__subtitle">Our Team</h3>
-          <div class="frame__indicator"></div>
-        </div>
-        <div class="strip-outer">
-          <div class="strip-inner">
-            <div class="draggable"></div>
-            <div class="strip">
-              <div class="strip__item">
-                <div class="img-outer img-outer--size-s">
-                  <div
-                    class="img-inner"
-                    style="
-                      background-image: url('https://avatars.githubusercontent.com/u/29405483?v=4');
-                    "
-                  ></div>
-                </div>
-                <span class="strip__item-number"
-                  ><a class="strip__item-link"><span>01</span></a
-                  ><span class="strip__item-plus"></span
-                ></span>
-              </div>
-              <div class="strip__item">
-                <div class="img-outer img-outer--size-m">
-                  <div
-                    class="img-inner"
-                    style="
-                      background-image: url('https://avatars.githubusercontent.com/u/54703305?v=4');
-                    "
-                  ></div>
-                </div>
-                <span class="strip__item-number"
-                  ><a class="strip__item-link"><span>02</span></a
-                  ><span class="strip__item-plus"></span
-                ></span>
-              </div>
-              <div class="strip__item">
-                <div class="img-outer img-outer--size-xl">
-                  <div
-                    class="img-inner"
-                    style="
-                      background-image: url('https://avatars.githubusercontent.com/u/66232233?v=4');
-                    "
-                  ></div>
-                </div>
-                <span class="strip__item-number"
-                  ><a class="strip__item-link"><span>03</span></a
-                  ><span class="strip__item-plus"></span
-                ></span>
-              </div>
-              <div class="strip__item">
-                <div class="img-outer img-outer--size-l">
-                  <div
-                    class="img-inner"
-                    style="
-                      background-image: url('https://avatars.githubusercontent.com/u/22902281?v=4');
-                    "
-                  ></div>
-                </div>
-                <span class="strip__item-number"
-                  ><a class="strip__item-link"><span>04</span></a
-                  ><span class="strip__item-plus"></span
-                ></span>
-              </div>
-              <div class="strip__item">
-                <div class="img-outer img-outer--size-s">
-                  <div
-                    class="img-inner"
-                    style="
-                      background-image: url('https://avatars.githubusercontent.com/u/42634886?v=4');
-                    "
-                  ></div>
-                </div>
-                <span class="strip__item-number"
-                  ><a class="strip__item-link"><span>05</span></a
-                  ><span class="strip__item-plus"></span
-                ></span>
-              </div>
-              <div class="strip__item">
-                <div class="img-outer">
-                  <div
-                    class="img-inner"
-                    style="
-                      background-image: url('https://avatars.githubusercontent.com/u/37954829?v=4');
-                    "
-                  ></div>
-                </div>
-                <span class="strip__item-number"
-                  ><a class="strip__item-link"><span>06</span></a
-                  ><span class="strip__item-plus"></span
-                ></span>
-              </div>
-              <div class="strip__item">
-                <div class="img-outer img-outer--size-s">
-                  <div
-                    class="img-inner"
-                    style="
-                      background-image: url('https://avatars.githubusercontent.com/u/40587889?v=4');
-                    "
-                  ></div>
-                </div>
-                <span class="strip__item-number"
-                  ><a class="strip__item-link"><span>07</span></a
-                  ><span class="strip__item-plus"></span
-                ></span>
-              </div>
-              <div class="strip__item">
-                <div class="img-outer img-outer--size-m">
-                  <div
-                    class="img-inner"
-                    style="
-                      background-image: url('https://avatars.githubusercontent.com/u/37337599?v=4');
-                    "
-                  ></div>
-                </div>
-                <span class="strip__item-number"
-                  ><a class="strip__item-link"><span>08</span></a
-                  ><span class="strip__item-plus"></span
-                ></span>
-              </div>
-              <div class="strip__item">
-                <div class="img-outer img-outer--size-s">
-                  <div
-                    class="img-inner"
-                    style="
-                      background-image: url('https://avatars.githubusercontent.com/u/40316716?v=4');
-                    "
-                  ></div>
-                </div>
-                <span class="strip__item-number"
-                  ><a class="strip__item-link"><span>09</span></a
-                  ><span class="strip__item-plus"></span
-                ></span>
-              </div>
-              <div class="strip__item">
-                <div class="img-outer img-outer--size-l">
-                  <div
-                    class="img-inner"
-                    style="
-                      background-image: url('https://avatars.githubusercontent.com/u/19311643?v=4');
-                    "
-                  ></div>
-                </div>
-                <span class="strip__item-number"
-                  ><a class="strip__item-link"><span>10</span></a
-                  ><span class="strip__item-plus"></span
-                ></span>
-              </div>
-              <div class="strip__item">
-                <div class="img-outer img-outer--size-s">
-                  <div
-                    class="img-inner"
-                    style="
-                      background-image: url('https://avatars.githubusercontent.com/u/43555219?v=4');
-                    "
-                  ></div>
-                </div>
-                <span class="strip__item-number"
-                  ><a class="strip__item-link"><span>11</span></a
-                  ><span class="strip__item-plus"></span
-                ></span>
-              </div>
-            </div>
-            <!--/strip-->
-          </div>
-          <!--/strip-inner-->
-          <div class="strip-cover">
-            <h2 class="strip-cover__title">Superior OS</h2>
-            <span class="strip-cover__subtitle">2019</span>
-          </div>
-        </div>
-        <!--/strip-outer-->
-        <div class="content">
-          <article class="content__item">
-            <div class="img-outer img-outer--content">
-              <div
-                class="img-inner img-inner--content"
-                style="
-                  background-image: url(https://avatars.githubusercontent.com/u/29405483?v=4);
-                "
-              ></div>
-            </div>
-            <div class="content__item-copy">
-              <h2 class="content__item-title">Founder/Developer</h2>
-              <p class="content__item-text">Sipun Ku Mahanta</p>
-            </div>
-          </article>
-          <article class="content__item">
-            <div class="img-outer img-outer--content">
-              <div
-                class="img-inner img-inner--content"
-                style="
-                  background-image: url(https://avatars.githubusercontent.com/u/54703305?v=4);
-                "
-              ></div>
-            </div>
-            <div class="content__item-copy">
-              <h2 class="content__item-title">
-                Interactive Designer/Developer
-              </h2>
-              <p class="content__item-text">whizzbbig aka Ojas Shukla</p>
-            </div>
-          </article>
-          <article class="content__item">
-            <div class="img-outer img-outer--content">
-              <div
-                class="img-inner img-inner--content"
-                style="
-                  background-image: url(https://avatars.githubusercontent.com/u/66232233?v=4);
-                "
-              ></div>
-            </div>
-            <div class="content__item-copy">
-              <h2 class="content__item-title">Android Developer</h2>
-              <p class="content__item-text">Joker-V2 aka Nipin NA</p>
-            </div>
-          </article>
-          <article class="content__item">
-            <div class="img-outer img-outer--content">
-              <div
-                class="img-inner img-inner--content"
-                style="
-                  background-image: url(https://avatars.githubusercontent.com/u/22902281?v=4);
-                "
-              ></div>
-            </div>
-            <div class="content__item-copy">
-              <h2 class="content__item-title">Infrastructure Manager</h2>
-              <p class="content__item-text">Subins Mani</p>
-            </div>
-          </article>
-          <article class="content__item">
-            <div class="img-outer img-outer--content">
-              <div
-                class="img-inner img-inner--content"
-                style="
-                  background-image: url(https://avatars.githubusercontent.com/u/42634886?v=4);
-                "
-              ></div>
-            </div>
-            <div class="content__item-copy">
-              <h2 class="content__item-title">Device Manager</h2>
-              <p class="content__item-text">Rashed Sahaji</p>
-            </div>
-          </article>
-          <article class="content__item">
-            <div class="img-outer img-outer--content">
-              <div
-                class="img-inner img-inner--content"
-                style="
-                  background-image: url(https://avatars.githubusercontent.com/u/37954829?v=4);
-                "
-              ></div>
-            </div>
-            <div class="content__item-copy">
-              <h2 class="content__item-title">Developer</h2>
-              <p class="content__item-text">Jayant Deshmukh</p>
-            </div>
-          </article>
-          <article class="content__item">
-            <div class="img-outer img-outer--content">
-              <div
-                class="img-inner img-inner--content"
-                style="
-                  background-image: url(https://avatars.githubusercontent.com/u/40587889?v=4);
-                "
-              ></div>
-            </div>
-            <div class="content__item-copy">
-              <h2 class="content__item-title">UI/UX Developer</h2>
-              <p class="content__item-text">Rahul Mishra</p>
-            </div>
-          </article>
-          <article class="content__item">
-            <div class="img-outer img-outer--content">
-              <div
-                class="img-inner img-inner--content"
-                style="
-                  background-image: url(https://avatars.githubusercontent.com/u/37337599?v=4);
-                "
-              ></div>
-            </div>
-            <div class="content__item-copy">
-              <h2 class="content__item-title">Project Moderator</h2>
-              <p class="content__item-text">Shreehari Vaasistha</p>
-            </div>
-          </article>
-          <article class="content__item">
-            <div class="img-outer img-outer--content">
-              <div
-                class="img-inner img-inner--content"
-                style="
-                  background-image: url(https://avatars.githubusercontent.com/u/40316716?v=4);
-                "
-              ></div>
-            </div>
-            <div class="content__item-copy">
-              <h2 class="content__item-title">Designer</h2>
-              <p class="content__item-text">Pavan Patel</p>
-            </div>
-          </article>
-          <article class="content__item">
-            <div class="img-outer img-outer--content">
-              <div
-                class="img-inner img-inner--content"
-                style="
-                  background-image: url(https://avatars.githubusercontent.com/u/19311643?v=4);
-                "
-              ></div>
-            </div>
-            <div class="content__item-copy">
-              <h2 class="content__item-title">UI/UX Developer</h2>
-              <p class="content__item-text">Ionut Iacob</p>
-            </div>
-          </article>
-          <article class="content__item">
-            <div class="img-outer img-outer--content">
-              <div
-                class="img-inner img-inner--content"
-                style="
-                  background-image: url(https://avatars.githubusercontent.com/u/43555219?v=4);
-                "
-              ></div>
-            </div>
-            <div class="content__item-copy">
-              <h2 class="content__item-title">Web Developer</h2>
-              <p class="content__item-text">Arun Teltia</p>
-            </div>
-          </article>
-          <button class="content__close" aria-label="Close content">
-            <svg width="12" height="26" viewBox="0 0 12 26">
-              <path
-                d="M5.293 25H5v-.293l-5-5L.707 19 5 23.293V0h1v23.657L10.657 19l.707.707-5.657 5.657-.025-.025-.025.025L5.293 25z"
+        </section>
+        <!-- S C R E E N S H O T S  SECTION -->
+        <main
+          id="screenshots"
+          data-bgcolor="#000"
+          data-textcolor="#f5f5f5"
+          class="grid-item main"
+        >
+          <h1 class="heading">Screenshots</h1>
+          <div class="items">
+            <div class="item item1">
+              <img
+                class="screeenshots__img"
+                src="./img/androidVersion.png"
+                alt=""
               />
-            </svg>
-          </button>
-        </div>
-      </main>
-      <footer data-bgcolor="#080705" data-textcolor="#f5f5f5" class="footer">
-        <ul class="footer__nav">
-          <li class="footer__nav-link">
-            <a href="https://gerrit.superioros.org/"> Gerrit </a>
-          </li>
-          <li class="footer__nav-link">
-            <a href="https://translations.superioros.org/"> Crowdin </a>
-          </li>
-          <li class="footer__nav-link">
-            <a href="https://t.me/Superior_os"> Telegram </a>
-          </li>
-          <li class="footer__nav-link">
-            <a href="https://telegra.ph/UPI-Id-09-18"> Donate </a>
-          </li>
-        </ul>
-        <div class="footer__container">
-          <div class="footer__copyright">
-            &#169; from 2019 - <span id="date"></span> by
-            <span>Superior Os</span>
+            </div>
+            <div class="item item2">
+              <img class="screeenshots__img" src="./img/home.png" alt="" />
+            </div>
+            <div class="item item3">
+              <img
+                class="screeenshots__img"
+                src="./img/lockscreen.png"
+                alt=""
+              />
+            </div>
+            <div class="item item4">
+              <img class="screeenshots__img" src="./img/qs.png" alt="" />
+            </div>
+            <div class="item item5">
+              <img class="screeenshots__img" src="./img/settings.png" alt="" />
+            </div>
+            <div class="item item6">
+              <img
+                class="screeenshots__img"
+                src="./img/superiorSettings.png"
+                alt=""
+              />
+            </div>
+            <div class="item item7">
+              <img class="screeenshots__img" src="./img/version.png" alt="" />
+            </div>
           </div>
-          <div class="footer__credit">
-            <h4>
-              made with
-              <span
-                ><svg
-                  id="color"
-                  height="20px"
-                  viewBox="-1 0 24 45"
-                  width="20px"
-                  style="transform: translate(0px, 8px)"
-                >
-                  <path
-                    d="m11.466 22.776c.141.144.333.224.534.224s.393-.08.534-.224l9.594-9.721c4.001-4.053 1.158-11.055-4.532-11.055-3.417 0-4.985 2.511-5.596 2.98-.614-.471-2.172-2.98-5.596-2.98-5.672 0-8.55 6.984-4.531 11.055z"
-                    style="animation-play-state: running"
-                  ></path></svg
-              ></span>
-              by &ThickSpace;
-              <div class="footer__credit-link">
-                <a href="https://t.me/whizzbbig">whizzbbig</a>
+        </main>
+        <!-- T E A M  SECTION -->
+        <main data-bgcolor="#000" data-textcolor="#f5f5f5" id="team">
+          <div class="frame">
+            <h3 class="frame__subtitle">Our Team</h3>
+            <div class="frame__indicator"></div>
+          </div>
+          <div class="strip-outer">
+            <div class="strip-inner">
+              <div class="draggable"></div>
+              <div class="strip">
+                <div class="strip__item">
+                  <div class="img-outer img-outer--size-s">
+                    <div
+                      class="img-inner"
+                      style="
+                        background-image: url('https://avatars.githubusercontent.com/u/29405483?v=4');
+                      "
+                    ></div>
+                  </div>
+                  <span class="strip__item-number"
+                    ><a class="strip__item-link"><span>01</span></a
+                    ><span class="strip__item-plus"></span
+                  ></span>
+                </div>
+                <div class="strip__item">
+                  <div class="img-outer img-outer--size-m">
+                    <div
+                      class="img-inner"
+                      style="
+                        background-image: url('https://avatars.githubusercontent.com/u/54703305?v=4');
+                      "
+                    ></div>
+                  </div>
+                  <span class="strip__item-number"
+                    ><a class="strip__item-link"><span>02</span></a
+                    ><span class="strip__item-plus"></span
+                  ></span>
+                </div>
+                <div class="strip__item">
+                  <div class="img-outer img-outer--size-xl">
+                    <div
+                      class="img-inner"
+                      style="
+                        background-image: url('https://avatars.githubusercontent.com/u/66232233?v=4');
+                      "
+                    ></div>
+                  </div>
+                  <span class="strip__item-number"
+                    ><a class="strip__item-link"><span>03</span></a
+                    ><span class="strip__item-plus"></span
+                  ></span>
+                </div>
+                <div class="strip__item">
+                  <div class="img-outer img-outer--size-l">
+                    <div
+                      class="img-inner"
+                      style="
+                        background-image: url('https://avatars.githubusercontent.com/u/22902281?v=4');
+                      "
+                    ></div>
+                  </div>
+                  <span class="strip__item-number"
+                    ><a class="strip__item-link"><span>04</span></a
+                    ><span class="strip__item-plus"></span
+                  ></span>
+                </div>
+                <div class="strip__item">
+                  <div class="img-outer img-outer--size-s">
+                    <div
+                      class="img-inner"
+                      style="
+                        background-image: url('https://avatars.githubusercontent.com/u/42634886?v=4');
+                      "
+                    ></div>
+                  </div>
+                  <span class="strip__item-number"
+                    ><a class="strip__item-link"><span>05</span></a
+                    ><span class="strip__item-plus"></span
+                  ></span>
+                </div>
+                <div class="strip__item">
+                  <div class="img-outer">
+                    <div
+                      class="img-inner"
+                      style="
+                        background-image: url('https://avatars.githubusercontent.com/u/37954829?v=4');
+                      "
+                    ></div>
+                  </div>
+                  <span class="strip__item-number"
+                    ><a class="strip__item-link"><span>06</span></a
+                    ><span class="strip__item-plus"></span
+                  ></span>
+                </div>
+                <div class="strip__item">
+                  <div class="img-outer img-outer--size-s">
+                    <div
+                      class="img-inner"
+                      style="
+                        background-image: url('https://avatars.githubusercontent.com/u/40587889?v=4');
+                      "
+                    ></div>
+                  </div>
+                  <span class="strip__item-number"
+                    ><a class="strip__item-link"><span>07</span></a
+                    ><span class="strip__item-plus"></span
+                  ></span>
+                </div>
+                <div class="strip__item">
+                  <div class="img-outer img-outer--size-m">
+                    <div
+                      class="img-inner"
+                      style="
+                        background-image: url('https://avatars.githubusercontent.com/u/37337599?v=4');
+                      "
+                    ></div>
+                  </div>
+                  <span class="strip__item-number"
+                    ><a class="strip__item-link"><span>08</span></a
+                    ><span class="strip__item-plus"></span
+                  ></span>
+                </div>
+                <div class="strip__item">
+                  <div class="img-outer img-outer--size-s">
+                    <div
+                      class="img-inner"
+                      style="
+                        background-image: url('https://avatars.githubusercontent.com/u/40316716?v=4');
+                      "
+                    ></div>
+                  </div>
+                  <span class="strip__item-number"
+                    ><a class="strip__item-link"><span>09</span></a
+                    ><span class="strip__item-plus"></span
+                  ></span>
+                </div>
+                <div class="strip__item">
+                  <div class="img-outer img-outer--size-l">
+                    <div
+                      class="img-inner"
+                      style="
+                        background-image: url('https://avatars.githubusercontent.com/u/19311643?v=4');
+                      "
+                    ></div>
+                  </div>
+                  <span class="strip__item-number"
+                    ><a class="strip__item-link"><span>10</span></a
+                    ><span class="strip__item-plus"></span
+                  ></span>
+                </div>
+                <div class="strip__item">
+                  <div class="img-outer img-outer--size-s">
+                    <div
+                      class="img-inner"
+                      style="
+                        background-image: url('https://avatars.githubusercontent.com/u/43555219?v=4');
+                      "
+                    ></div>
+                  </div>
+                  <span class="strip__item-number"
+                    ><a class="strip__item-link"><span>11</span></a
+                    ><span class="strip__item-plus"></span
+                  ></span>
+                </div>
               </div>
-            </h4>
+              <!--/strip-->
+            </div>
+            <!--/strip-inner-->
+            <div class="strip-cover">
+              <h2 class="strip-cover__title">Superior OS</h2>
+              <span class="strip-cover__subtitle">2019</span>
+            </div>
           </div>
-        </div>
-      </footer>
-      <!-- </div> -->
+          <!--/strip-outer-->
+          <div class="content">
+            <article class="content__item">
+              <div class="img-outer img-outer--content">
+                <div
+                  class="img-inner img-inner--content"
+                  style="
+                    background-image: url(https://avatars.githubusercontent.com/u/29405483?v=4);
+                  "
+                ></div>
+              </div>
+              <div class="content__item-copy">
+                <h2 class="content__item-title">Founder/Developer</h2>
+                <p class="content__item-text">Sipun Ku Mahanta</p>
+              </div>
+            </article>
+            <article class="content__item">
+              <div class="img-outer img-outer--content">
+                <div
+                  class="img-inner img-inner--content"
+                  style="
+                    background-image: url(https://avatars.githubusercontent.com/u/54703305?v=4);
+                  "
+                ></div>
+              </div>
+              <div class="content__item-copy">
+                <h2 class="content__item-title">
+                  Interactive Designer/Developer
+                </h2>
+                <p class="content__item-text">whizzbbig aka Ojas Shukla</p>
+              </div>
+            </article>
+            <article class="content__item">
+              <div class="img-outer img-outer--content">
+                <div
+                  class="img-inner img-inner--content"
+                  style="
+                    background-image: url(https://avatars.githubusercontent.com/u/66232233?v=4);
+                  "
+                ></div>
+              </div>
+              <div class="content__item-copy">
+                <h2 class="content__item-title">Android Developer</h2>
+                <p class="content__item-text">Joker-V2 aka Nipin NA</p>
+              </div>
+            </article>
+            <article class="content__item">
+              <div class="img-outer img-outer--content">
+                <div
+                  class="img-inner img-inner--content"
+                  style="
+                    background-image: url(https://avatars.githubusercontent.com/u/22902281?v=4);
+                  "
+                ></div>
+              </div>
+              <div class="content__item-copy">
+                <h2 class="content__item-title">Infrastructure Manager</h2>
+                <p class="content__item-text">Subins Mani</p>
+              </div>
+            </article>
+            <article class="content__item">
+              <div class="img-outer img-outer--content">
+                <div
+                  class="img-inner img-inner--content"
+                  style="
+                    background-image: url(https://avatars.githubusercontent.com/u/42634886?v=4);
+                  "
+                ></div>
+              </div>
+              <div class="content__item-copy">
+                <h2 class="content__item-title">Device Manager</h2>
+                <p class="content__item-text">Rashed Sahaji</p>
+              </div>
+            </article>
+            <article class="content__item">
+              <div class="img-outer img-outer--content">
+                <div
+                  class="img-inner img-inner--content"
+                  style="
+                    background-image: url(https://avatars.githubusercontent.com/u/37954829?v=4);
+                  "
+                ></div>
+              </div>
+              <div class="content__item-copy">
+                <h2 class="content__item-title">Developer</h2>
+                <p class="content__item-text">Jayant Deshmukh</p>
+              </div>
+            </article>
+            <article class="content__item">
+              <div class="img-outer img-outer--content">
+                <div
+                  class="img-inner img-inner--content"
+                  style="
+                    background-image: url(https://avatars.githubusercontent.com/u/40587889?v=4);
+                  "
+                ></div>
+              </div>
+              <div class="content__item-copy">
+                <h2 class="content__item-title">UI/UX Developer</h2>
+                <p class="content__item-text">Rahul Mishra</p>
+              </div>
+            </article>
+            <article class="content__item">
+              <div class="img-outer img-outer--content">
+                <div
+                  class="img-inner img-inner--content"
+                  style="
+                    background-image: url(https://avatars.githubusercontent.com/u/37337599?v=4);
+                  "
+                ></div>
+              </div>
+              <div class="content__item-copy">
+                <h2 class="content__item-title">Project Moderator</h2>
+                <p class="content__item-text">Shreehari Vaasistha</p>
+              </div>
+            </article>
+            <article class="content__item">
+              <div class="img-outer img-outer--content">
+                <div
+                  class="img-inner img-inner--content"
+                  style="
+                    background-image: url(https://avatars.githubusercontent.com/u/40316716?v=4);
+                  "
+                ></div>
+              </div>
+              <div class="content__item-copy">
+                <h2 class="content__item-title">Designer</h2>
+                <p class="content__item-text">Pavan Patel</p>
+              </div>
+            </article>
+            <article class="content__item">
+              <div class="img-outer img-outer--content">
+                <div
+                  class="img-inner img-inner--content"
+                  style="
+                    background-image: url(https://avatars.githubusercontent.com/u/19311643?v=4);
+                  "
+                ></div>
+              </div>
+              <div class="content__item-copy">
+                <h2 class="content__item-title">UI/UX Developer</h2>
+                <p class="content__item-text">Ionut Iacob</p>
+              </div>
+            </article>
+            <article class="content__item">
+              <div class="img-outer img-outer--content">
+                <div
+                  class="img-inner img-inner--content"
+                  style="
+                    background-image: url(https://avatars.githubusercontent.com/u/43555219?v=4);
+                  "
+                ></div>
+              </div>
+              <div class="content__item-copy">
+                <h2 class="content__item-title">Web Developer</h2>
+                <p class="content__item-text">Arun Teltia</p>
+              </div>
+            </article>
+            <button class="content__close" aria-label="Close content">
+              <svg width="12" height="26" viewBox="0 0 12 26">
+                <path
+                  d="M5.293 25H5v-.293l-5-5L.707 19 5 23.293V0h1v23.657L10.657 19l.707.707-5.657 5.657-.025-.025-.025.025L5.293 25z"
+                />
+              </svg>
+            </button>
+          </div>
+        </main>
+        <footer data-bgcolor="#080705" data-textcolor="#f5f5f5" class="footer">
+          <ul class="footer__nav">
+            <li class="footer__nav-link">
+              <a href="https://gerrit.superioros.org/"> Gerrit </a>
+            </li>
+            <li class="footer__nav-link">
+              <a href="https://translations.superioros.org/"> Crowdin </a>
+            </li>
+            <li class="footer__nav-link">
+              <a href="https://t.me/Superior_os"> Telegram </a>
+            </li>
+            <li class="footer__nav-link">
+              <a href="https://telegra.ph/UPI-Id-09-18"> Donate </a>
+            </li>
+          </ul>
+          <div class="footer__container">
+            <div class="footer__copyright">
+              &#169; from 2019 - <span id="date"></span> by
+              <span>Superior Os</span>
+            </div>
+            <div class="footer__credit">
+              <h4>
+                made with
+                <span
+                  ><svg
+                    id="color"
+                    height="20px"
+                    viewBox="-1 0 24 45"
+                    width="20px"
+                    style="transform: translate(0px, 8px)"
+                  >
+                    <path
+                      d="m11.466 22.776c.141.144.333.224.534.224s.393-.08.534-.224l9.594-9.721c4.001-4.053 1.158-11.055-4.532-11.055-3.417 0-4.985 2.511-5.596 2.98-.614-.471-2.172-2.98-5.596-2.98-5.672 0-8.55 6.984-4.531 11.055z"
+                      style="animation-play-state: running"
+                    ></path></svg
+                ></span>
+                by &ThickSpace;
+                <div class="footer__credit-link">
+                  <a href="https://t.me/whizzbbig">whizzbbig</a>
+                </div>
+              </h4>
+            </div>
+          </div>
+        </footer>
+      </div>
     </div>
 
     <div class="cursor">

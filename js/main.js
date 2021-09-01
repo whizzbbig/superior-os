@@ -20,7 +20,6 @@ window.addEventListener("load", function () {
       getDirection: true,
     },
   });
-  
 
   scroller.on("scroll", function (t) {
     document.documentElement.setAttribute("data-direction", t.direction);
@@ -131,106 +130,106 @@ slider.addEventListener("mousemove", (e) => {
 // Desktop View
 
 // Adding scene to a app
-// const app = new SpeRuntime.Application();
-// app.start("../scene.json");
+const app = new SpeRuntime.Application();
+app.start("../scene.json");
 
-// // Disable Scroll on container of scene and on scene
-// const disableScroll = () => {
-//   const mockupContainer = document.querySelector("#mockup-container");
-//   mockupContainer.scrollTo(0, 0);
-//   mockupContainer.style.overflow = "hidden";
-// };
+// Disable Scroll on container of scene and on scene
+const disableScroll = () => {
+  const mockupContainer = document.querySelector("#mockup-container");
+  mockupContainer.scrollTo(0, 0);
+  mockupContainer.style.overflow = "hidden";
+};
 
-// disableScroll();
+disableScroll();
 
-// // Add Year Automatically To Footer
-// const d = new Date();
-// const n = d.getFullYear();
-// document.getElementById("date").innerHTML = n;
+// Add Year Automatically To Footer
+const d = new Date();
+const n = d.getFullYear();
+document.getElementById("date").innerHTML = n;
 
-// // PRELOADS SCENE TO YOUR SCREEN
-// const preloadCanvas = (id) => {
-//   return new Promise((resolve) => {
-//     const canvas = document.getElementById(id);
-//     const context = canvas.getContext("2d");
-//     const image = new Image();
-//     image.onload = () => {
-//       context.drawImage(image, 0, 0);
-//       resolve();
-//     };
-//     image.src = canvas.toDataURL();
-//   });
-// };
+// PRELOADS SCENE TO YOUR SCREEN
+const preloadCanvas = (id) => {
+  return new Promise((resolve) => {
+    const canvas = document.getElementById(id);
+    const context = canvas.getContext("2d");
+    const image = new Image();
+    image.onload = () => {
+      context.drawImage(image, 0, 0);
+      resolve();
+    };
+    image.src = canvas.toDataURL();
+  });
+};
 
-// // PRELOADER
-// var animation = bodymovin.loadAnimation({
-//   container: document.getElementById("bm"),
-//   renderer: "svg",
-//   loop: true,
-//   autoplay: true,
-//   path: "./data.json",
-// });
+// PRELOADER
+var animation = bodymovin.loadAnimation({
+  container: document.getElementById("bm"),
+  renderer: "svg",
+  loop: true,
+  autoplay: true,
+  path: "./data.json",
+});
 
-// const images = document.querySelectorAll("img");
-// let isLoaded = false;
-// let isLoadingAnimationEnd = false;
-// const imgLoad = imagesLoaded(images);
+const images = document.querySelectorAll("img");
+let isLoaded = false;
+let isLoadingAnimationEnd = false;
+const imgLoad = imagesLoaded(images);
 
-// const entranceAnimation = () => {
-//   const tl = gsap.timeline();
-//   tl.to("#bm", {
-//     y: -100,
-//     duration: 1,
-//     ease: "power2.inOut",
-//   })
-//     .to(
-//       ".loading",
-//       {
-//         yPercent: -100,
-//         duration: 1.25,
-//         ease: "power4.inOut",
-//       },
-//       0
-//     )
-//     .to(
-//       ".content",
-//       {
-//         duration: 1,
-//         opacity: 1,
-//         y: 0,
-//         stagger: 0.1,
-//         ease: "power2.out",
-//       },
-//       0.6
-//     );
-// };
+const entranceAnimation = () => {
+  const tl = gsap.timeline();
+  tl.to("#bm", {
+    y: -100,
+    duration: 1,
+    ease: "power2.inOut",
+  })
+    .to(
+      ".loading",
+      {
+        yPercent: -100,
+        duration: 1.25,
+        ease: "power4.inOut",
+      },
+      0
+    )
+    .to(
+      ".content",
+      {
+        duration: 1,
+        opacity: 1,
+        y: 0,
+        stagger: 0.1,
+        ease: "power2.out",
+      },
+      0.6
+    );
+};
 
-// const loadingAnimation = () => {
-//   const tl = gsap
-//     .timeline({
-//       onComplete: () => {
-//         isLoadingAnimationEnd = true;
-//         if (isLoaded) entranceAnimation();
-//       },
-//     })
-//     .from(".loading", {
-//       yPercent: 100,
-//       ease: "power3.inOut",
-//       duration: 1,
-//     })
-//     .from(
-//       "#bm",
-//       {
-//         y: 80,
-//         duration: 1,
-//         ease: "power2.out",
-//       },
-//       0.5
-//     );
-// };
+const loadingAnimation = () => {
+  const tl = gsap
+    .timeline({
+      onComplete: () => {
+        isLoadingAnimationEnd = true;
+        if (isLoaded) entranceAnimation();
+      },
+    })
+    .from(".loading", {
+      yPercent: 100,
+      ease: "power3.inOut",
+      duration: 1,
+    })
+    .from(
+      "#bm",
+      {
+        y: 80,
+        duration: 1,
+        ease: "power2.out",
+      },
+      0.5
+    );
+};
 
-// loadingAnimation();
-// imgLoad.on("always", function () {
-//   isLoaded = true;
-//   if (isLoadingAnimationEnd) entranceAnimation();
-// });
+loadingAnimation();
+imgLoad.on("always", function () {
+  isLoaded = true;
+  if (isLoadingAnimationEnd) entranceAnimation();
+});
