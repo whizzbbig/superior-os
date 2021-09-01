@@ -131,36 +131,36 @@ slider.addEventListener("mousemove", (e) => {
 // Desktop View
 
 // Adding scene to a app
-const app = new SpeRuntime.Application();
-app.start("../scene.json");
+// const app = new SpeRuntime.Application();
+// app.start("../scene.json");
 
-// Disable Scroll on container of scene and on scene
-const disableScroll = () => {
-  const mockupContainer = document.querySelector("#mockup-container");
-  mockupContainer.scrollTo(0, 0);
-  mockupContainer.style.overflow = "hidden";
-};
+// // Disable Scroll on container of scene and on scene
+// const disableScroll = () => {
+//   const mockupContainer = document.querySelector("#mockup-container");
+//   mockupContainer.scrollTo(0, 0);
+//   mockupContainer.style.overflow = "hidden";
+// };
 
-disableScroll();
+// disableScroll();
 
-// Add Year Automatically To Footer
-const d = new Date();
-const n = d.getFullYear();
-document.getElementById("date").innerHTML = n;
+// // Add Year Automatically To Footer
+// const d = new Date();
+// const n = d.getFullYear();
+// document.getElementById("date").innerHTML = n;
 
-// PRELOADS SCENE TO YOUR SCREEN
-const preloadCanvas = (id) => {
-  return new Promise((resolve) => {
-    const canvas = document.getElementById(id);
-    const context = canvas.getContext("2d");
-    const image = new Image();
-    image.onload = () => {
-      context.drawImage(image, 0, 0);
-      resolve();
-    };
-    image.src = canvas.toDataURL();
-  });
-};
+// // PRELOADS SCENE TO YOUR SCREEN
+// const preloadCanvas = (id) => {
+//   return new Promise((resolve) => {
+//     const canvas = document.getElementById(id);
+//     const context = canvas.getContext("2d");
+//     const image = new Image();
+//     image.onload = () => {
+//       context.drawImage(image, 0, 0);
+//       resolve();
+//     };
+//     image.src = canvas.toDataURL();
+//   });
+// };
 
 // PRELOADER
 var animation = bodymovin.loadAnimation({
