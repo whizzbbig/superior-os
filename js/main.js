@@ -21,6 +21,8 @@ window.addEventListener("load", function () {
     },
   });
 
+  
+
   scroller.on("scroll", function (t) {
     document.documentElement.setAttribute("data-direction", t.direction);
   });
@@ -147,6 +149,20 @@ const d = new Date();
 const n = d.getFullYear();
 document.getElementById("date").innerHTML = n;
 
+// PRELOADS SCENE TO YOUR SCREEN
+const preloadCanvas = (id) => {
+  return new Promise((resolve) => {
+    const canvas = document.getElementById(id);
+    const context = canvas.getContext("2d");
+    const image = new Image();
+    image.onload = () => {
+      context.drawImage(image, 0, 0);
+      resolve();
+    };
+    image.src = canvas.toDataURL();
+  });
+};
+
 // PRELOADER
 var animation = bodymovin.loadAnimation({
   container: document.getElementById("bm"),
@@ -215,7 +231,6 @@ const loadingAnimation = () => {
 };
 
 loadingAnimation();
-
 imgLoad.on("always", function () {
   isLoaded = true;
   if (isLoadingAnimationEnd) entranceAnimation();
