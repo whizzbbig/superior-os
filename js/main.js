@@ -98,9 +98,8 @@ window.addEventListener("load", function () {
   ScrollTrigger.addEventListener("refresh", () => scroller.update());
 
   ScrollTrigger.refresh();
+  update();
 });
-
-update();
 
 const slider = document.querySelector(".items");
 let isDown = false;
