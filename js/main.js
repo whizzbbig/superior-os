@@ -1,11 +1,4 @@
-// PRELOADER
-var animation = bodymovin.loadAnimation({
-  container: document.getElementById("bm"),
-  renderer: "svg",
-  loop: true,
-  autoplay: true,
-  path: "./data.json",
-});
+gsap.registerPlugin(ScrollTrigger);
 
 const images = document.querySelectorAll("img");
 let isLoaded = false;
@@ -65,7 +58,28 @@ imgLoad.on("always", function () {
   isLoaded = true;
   if (isLoadingAnimationEnd) entranceAnimation();
 
-  gsap.registerPlugin(ScrollTrigger);
+  // PRELOADER
+  var animation = bodymovin.loadAnimation({
+    container: document.getElementById("bm"),
+    renderer: "svg",
+    loop: true,
+    autoplay: true,
+    path: "./data.json",
+  });
+
+  // Desktop View
+
+  // Adding scene to a app
+  const app = new SpeRuntime.Application();
+  app.start("../scene.json");
+
+  // Disable Scroll on container of scene and on scene
+  const disableScroll = () => {
+    const mockupContainer = document.querySelector("#mockup-container");
+    mockupContainer.scrollTo(0, 0);
+    mockupContainer.style.overflow = "hidden";
+  };
+  disableScroll();
 
   const pageContainer = document.querySelector(".container");
   pageContainer.setAttribute("data-scroll-container", "");
@@ -164,9 +178,8 @@ imgLoad.on("always", function () {
   ScrollTrigger.addEventListener("refresh", () => scroller.update());
 
   ScrollTrigger.refresh();
-
-  update();
 });
+update();
 
 // SLIDER FOR SCREENSHOT SECTION ON MOBILE
 const slider = document.querySelector(".items");
@@ -195,21 +208,6 @@ slider.addEventListener("mousemove", (e) => {
   const walk = (x - startX) * 3; //scroll-fast
   slider.scrollLeft = scrollLeft - walk;
 });
-
-// Desktop View
-
-// Adding scene to a app
-const app = new SpeRuntime.Application();
-app.start("../scene.json");
-
-// Disable Scroll on container of scene and on scene
-const disableScroll = () => {
-  const mockupContainer = document.querySelector("#mockup-container");
-  mockupContainer.scrollTo(0, 0);
-  mockupContainer.style.overflow = "hidden";
-};
-
-disableScroll();
 
 // Add Year Automatically To Footer
 const d = new Date();
