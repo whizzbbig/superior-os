@@ -10,7 +10,9 @@ window.addEventListener("load", function () {
     smooth: true,
     getDirection: true,
     smartphone: {
-      smooth: false,
+      smooth: true,
+      getDirection: true,
+      inertia: 0.8,
     },
     tablet: {
       breakpoint: 0,
