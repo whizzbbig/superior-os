@@ -100,6 +100,8 @@ window.addEventListener("load", function () {
   ScrollTrigger.refresh();
 });
 
+update();
+
 const slider = document.querySelector(".items");
 let isDown = false;
 let startX;
