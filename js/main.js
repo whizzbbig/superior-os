@@ -1,4 +1,70 @@
-window.addEventListener("load", function () {
+// PRELOADER
+var animation = bodymovin.loadAnimation({
+  container: document.getElementById("bm"),
+  renderer: "svg",
+  loop: true,
+  autoplay: true,
+  path: "./data.json",
+});
+
+const images = document.querySelectorAll("img");
+let isLoaded = false;
+let isLoadingAnimationEnd = false;
+const imgLoad = imagesLoaded(images);
+
+const entranceAnimation = () => {
+  const tl = gsap.timeline();
+  tl.to("#bm", {
+    y: -100,
+    duration: 1,
+    ease: "power2.inOut",
+  })
+    .to(
+      ".loading",
+      {
+        yPercent: -100,
+        duration: 1.25,
+        ease: "power4.inOut",
+      },
+      0
+    )
+    .to(
+      ".content",
+      {
+        duration: 1,
+        opacity: 1,
+        y: 0,
+        stagger: 0.1,
+        ease: "power2.out",
+      },
+      0.6
+    );
+};
+
+const loadingAnimation = () => {
+  const tl = gsap
+    .timeline({
+      onComplete: () => {
+        isLoadingAnimationEnd = true;
+        if (isLoaded) entranceAnimation();
+      },
+    })
+    .from(
+      "#bm",
+      {
+        y: 80,
+        duration: 1,
+        ease: "power2.out",
+      },
+      0.5
+    );
+};
+
+loadingAnimation();
+imgLoad.on("always", function () {
+  isLoaded = true;
+  if (isLoadingAnimationEnd) entranceAnimation();
+
   gsap.registerPlugin(ScrollTrigger);
 
   const pageContainer = document.querySelector(".container");
@@ -98,9 +164,11 @@ window.addEventListener("load", function () {
   ScrollTrigger.addEventListener("refresh", () => scroller.update());
 
   ScrollTrigger.refresh();
+
   update();
 });
 
+// SLIDER FOR SCREENSHOT SECTION ON MOBILE
 const slider = document.querySelector(".items");
 let isDown = false;
 let startX;
@@ -147,85 +215,3 @@ disableScroll();
 const d = new Date();
 const n = d.getFullYear();
 document.getElementById("date").innerHTML = n;
-
-// PRELOADS SCENE TO YOUR SCREEN
-const preloadCanvas = (id) => {
-  return new Promise((resolve) => {
-    const canvas = document.getElementById(id);
-    const context = canvas.getContext("2d");
-    const image = new Image();
-    image.onload = () => {
-      context.drawImage(image, 0, 0);
-      resolve();
-    };
-    image.src = canvas.toDataURL();
-  });
-};
-
-// PRELOADER
-var animation = bodymovin.loadAnimation({
-  container: document.getElementById("bm"),
-  renderer: "svg",
-  loop: true,
-  autoplay: true,
-  path: "./data.json",
-});
-
-const images = document.querySelectorAll("img");
-let isLoaded = false;
-let isLoadingAnimationEnd = false;
-const imgLoad = imagesLoaded(images);
-
-const entranceAnimation = () => {
-  const tl = gsap.timeline();
-  tl.to("#bm", {
-    y: -100,
-    duration: 1,
-    ease: "power2.inOut",
-  })
-    .to(
-      ".loading",
-      {
-        yPercent: -100,
-        duration: 1.25,
-        ease: "power4.inOut",
-      },
-      0
-    )
-    .to(
-      ".content",
-      {
-        duration: 1,
-        opacity: 1,
-        y: 0,
-        stagger: 0.1,
-        ease: "power2.out",
-      },
-      0.6
-    );
-};
-
-const loadingAnimation = () => {
-  const tl = gsap
-    .timeline({
-      onComplete: () => {
-        isLoadingAnimationEnd = true;
-        if (isLoaded) entranceAnimation();
-      },
-    })
-    .from(
-      "#bm",
-      {
-        y: 80,
-        duration: 1,
-        ease: "power2.out",
-      },
-      0.5
-    );
-};
-
-loadingAnimation();
-imgLoad.on("always", function () {
-  isLoaded = true;
-  if (isLoadingAnimationEnd) entranceAnimation();
-});
