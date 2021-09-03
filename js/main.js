@@ -22,7 +22,7 @@ const entranceAnimation = () => {
       0
     )
     .to(
-      ".content",
+      ".container",
       {
         duration: 1,
         opacity: 1,
@@ -39,6 +39,7 @@ const loadingAnimation = () => {
     .timeline({
       onComplete: () => {
         isLoadingAnimationEnd = true;
+        document.querySelector('.container').classList.remove('is-loading');
         if (isLoaded) entranceAnimation();
       },
     })

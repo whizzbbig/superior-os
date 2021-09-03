@@ -10,7 +10,8 @@ html {
 }
 
 body {
-  overflow-y: hidden;
+  overflow-y: scroll;
+  overflow: hidden;
   overflow-x: hidden;
   width: 100vw;
 
@@ -83,4 +84,8 @@ img {
     top: 0;
     display: grid;
   }
+}
+
+.is-loading {
+  display: none;
 }
