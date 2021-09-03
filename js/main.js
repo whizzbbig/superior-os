@@ -90,7 +90,7 @@ imgLoad.on("always", function () {
     inertia: 0.8,
     smooth: true,
     getDirection: true,
-    smartphone: {
+    phone: {
       smooth: true,
       getDirection: true,
       inertia: 0.8,
