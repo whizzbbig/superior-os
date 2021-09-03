@@ -13,12 +13,6 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
   width: 100vw;
-
-  .content {
-    // PRELOADER STYLES
-    opacity: 0;
-    transform: translateY(100px);
-  }
 }
 
 section:not(.horizontal-scroll) {
@@ -83,8 +77,4 @@ img {
     top: 0;
     display: grid;
   }
-}
-
-.is-loading {
-  display: none;
 }

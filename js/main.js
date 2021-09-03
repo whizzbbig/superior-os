@@ -30,8 +30,8 @@ const entranceAnimation = () => {
         stagger: 0.1,
         ease: "power2.out",
       },
-      0.6
-    );
+      0.6,
+      );
 };
 
 const loadingAnimation = () => {
@@ -39,7 +39,6 @@ const loadingAnimation = () => {
     .timeline({
       onComplete: () => {
         isLoadingAnimationEnd = true;
-        document.querySelector('.container').classList.remove('is-loading');
         if (isLoaded) entranceAnimation();
       },
     })
@@ -90,14 +89,14 @@ imgLoad.on("always", function () {
     inertia: 0.8,
     smooth: true,
     getDirection: true,
-    phone: {
+    mobile: {
       smooth: true,
       getDirection: true,
       inertia: 0.8,
     },
     tablet: {
       breakpoint: 0,
-      smooth: false,
+      smooth: true,
       getDirection: true,
     },
   });
