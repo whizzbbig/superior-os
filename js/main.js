@@ -90,14 +90,10 @@ imgLoad.on("always", function () {
     smooth: true,
     getDirection: true,
     mobile: {
-      smooth: true,
-      getDirection: true,
-      inertia: 0.8,
+      smooth: false,
     },
     tablet: {
-      breakpoint: 0,
       smooth: true,
-      getDirection: true,
     },
   });
 
