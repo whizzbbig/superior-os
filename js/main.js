@@ -91,9 +91,13 @@ imgLoad.on("always", function () {
     getDirection: true,
     mobile: {
       smooth: false,
+      getDirection: true,
+      inertia: 0,
     },
     tablet: {
-      smooth: true,
+      breakpoint: 0,
+      smooth: false,
+      getDirection: true,
     },
   });
 
