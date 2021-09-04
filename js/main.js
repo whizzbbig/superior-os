@@ -179,7 +179,6 @@ imgLoad.on("always", function () {
 
   ScrollTrigger.refresh();
 });
-update();
 
 // SLIDER FOR SCREENSHOT SECTION ON MOBILE
 const slider = document.querySelector(".items");
