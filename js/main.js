@@ -30,8 +30,8 @@ const entranceAnimation = () => {
         stagger: 0.1,
         ease: "power2.out",
       },
-      0.6,
-      );
+      0.6
+    );
 };
 
 const loadingAnimation = () => {
@@ -53,22 +53,7 @@ const loadingAnimation = () => {
     );
 };
 
-loadingAnimation();
-imgLoad.on("always", function () {
-  isLoaded = true;
-  if (isLoadingAnimationEnd) entranceAnimation();
-
-  // PRELOADER
-  var animation = bodymovin.loadAnimation({
-    container: document.getElementById("bm"),
-    renderer: "svg",
-    loop: true,
-    autoplay: true,
-    path: "./data.json",
-  });
-
-  // Desktop View
-
+const phoneMockup = () => {
   // Adding scene to a app
   const app = new SpeRuntime.Application();
   app.start("../scene.json");
@@ -80,6 +65,23 @@ imgLoad.on("always", function () {
     mockupContainer.style.overflow = "hidden";
   };
   disableScroll();
+};
+
+loadingAnimation();
+imgLoad.on("always", function () {
+  isLoaded = true;
+  if (isLoadingAnimationEnd)  entranceAnimation(); phoneMockup()
+
+  // PRELOADER
+  var animation = bodymovin.loadAnimation({
+    container: document.getElementById("bm"),
+    renderer: "svg",
+    loop: true,
+    autoplay: true,
+    path: "./data.json",
+  });
+
+  // Desktop View
 
   const pageContainer = document.querySelector(".container");
   pageContainer.setAttribute("data-scroll-container", "");
