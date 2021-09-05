@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/hkd5wsx.css" />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.1/dist/locomotive-scroll.css"
     />
     <link rel="stylesheet" href="./css/style.css" />
     <script>
@@ -158,7 +158,7 @@
       </a>
       <!-- /icon -->
     </nav>
-    <div class="container">
+    <div id="scroller">
       <!-- H O M E  SECTION -->
       <header
         id="home"
@@ -260,50 +260,53 @@
         data-bgcolor="#ea34a6"
         data-textcolor="#F5F5F5"
         data-scroll-speed="2"
-        class="features horizontal-scroll"
+        class="features horizontal"
       >
         <div class="pin-wrap">
-          <h1 data-scroll-target=".features" class="features__heading">
-            Features
-          </h1>
-          <div class="features__homescreen">
-            <h2 class="features__homescreen-heading">Homescreen</h2>
-            <img
-              src="./img/home.png"
-              alt="homescreen of superior rom"
-              class="features__homescreen-img"
-            />
-            <p>
-              We want to make you feel homescreen as yours, hence we have added
-              features which makes home screen customizable as per your likes.
-            </p>
-          </div>
-          <div class="features__superiorsettings">
-            <h2 class="features__superiorsettings-heading">
-              Superior Settings
-            </h2>
-            <img
-              src="./img/superiorSettings.png"
-              alt="additional settings from superior os rom"
-              class="features__superiorsettings-img"
-            />
-            <p>
-              We have carefully hand-picked features which helps you in your
-              dialy chores. Customize your device as you like.
-            </p>
-          </div>
-          <div class="features__updater">
-            <h2 class="features__superiorsettings-heading">Updater</h2>
-            <img
-              src="./img/version.png"
-              alt="updater panel of superior os rom"
-              class="features__updater-img"
-            />
-            <p>
-              We regularly update all our officially supported devices to make
-              sure your device stays upto-date. We have redesigned our updater
-              to make sure updating doesnt feel overwhelming.
-            </p>
+          <div class="animation-wrap to-right">
+            <h1 data-scroll-target=".features" class="features__heading">
+              Features
+            </h1>
+            <div class="features__homescreen">
+              <h2 class="features__homescreen-heading">Homescreen</h2>
+              <img
+                src="./img/home.png"
+                alt="homescreen of superior rom"
+                class="features__homescreen-img"
+              />
+              <p>
+                We want to make you feel homescreen as yours, hence we have
+                added features which makes home screen customizable as per your
+                likes.
+              </p>
+            </div>
+            <div class="features__superiorsettings">
+              <h2 class="features__superiorsettings-heading">
+                Superior Settings
+              </h2>
+              <img
+                src="./img/superiorSettings.png"
+                alt="additional settings from superior os rom"
+                class="features__superiorsettings-img"
+              />
+              <p>
+                We have carefully hand-picked features which helps you in your
+                dialy chores. Customize your device as you like.
+              </p>
+            </div>
+            <div class="features__updater">
+              <h2 class="features__superiorsettings-heading">Updater</h2>
+              <img
+                src="./img/version.png"
+                alt="updater panel of superior os rom"
+                class="features__updater-img"
+              />
+              <p>
+                We regularly update all our officially supported devices to make
+                sure your device stays upto-date. We have redesigned our updater
+                to make sure updating doesnt feel overwhelming.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -746,6 +749,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.1/dist/locomotive-scroll.min.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"
       integrity="sha512-UxP+UhJaGRWuMG2YC6LPWYpFQnsSgnor0VUF3BHdD83PS/pOpN+FYbZmrYN+ISX8jnvgVUciqP/fILOXDjZSwg=="
@@ -754,7 +758,6 @@
     ></script>
     <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/three@^0.131.0/build/three.min.js"></script>
-    <script src="./js/locomotive-scroll.min.js"></script>
     <script src="/js/imagesloaded.pkgd.min.js"></script>
     <script src="/js/draggabilly.pkgd.min.js"></script>
     <script src="/js/imagestrip.js"></script>
